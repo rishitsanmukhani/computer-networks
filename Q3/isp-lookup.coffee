@@ -15,9 +15,9 @@ getISP = (ip,cb)->
       cb(err);
   )
 inputs = fs.readFileSync('isptracert.txt','utf8');
-outputs= inputs;
 regex=/[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}/gi
 inputs = inputs.split("\n");
+outputs= inputs;
 line=0;
 for input in inputs
   while ipres=regex.exec(input)
@@ -27,7 +27,7 @@ for input in inputs
       (err,data)->
         # console.log(data);
         insertion=" - #{data.org ? 'unknown'}";
-        outputs[line]+= insertion
+        outputs[line]= (outputs[line])[0..-2] + insertion
         fs.writeFileSync('output.txt',outputs.join("\n"));
     );
     # console.log(ip,index);
