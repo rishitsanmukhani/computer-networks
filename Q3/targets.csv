@@ -1,0 +1,49 @@
+ETHZ (Switzerland), 129.132.19.216
+1    , data card
+2-4  , unknown (maybe ISP's local network)
+5-7  , TATA (India)
+9-11 , TATA (Europe)
+12-14, Level 3 Communications
+15-19, Unknown Switch
+19+  , Dropped
+
+University of Waterloo (Canada east), 129.97.208.23
+1    , data card
+2-4  , unknown (maybe ISP's local network)
+5-8  , TATA (India)
+9    , TATA (London)
+10-12 , TATA (US)
+12-15 , Allstream Corp
+16-20 , Internal Network of University
+
+University of Cape Town (South Africa), 137.158.158.44
+1    , data card
+2-4  , unknown (maybe ISP's local network)
+5-8  , TATA (India)
+9-11 , TATA (Europe)
+12-17, Cogent Communications
+18-21, UNINET project
+22+  , Dropped
+
+IIT Delhi (India), 103.27.9.20
+1    , data card
+2-4  , unknown (maybe ISP's local network)
+5  , TATA (India)
+6 , unknown internal router
+7+, dropped
+
+
+Google, 173.194.36.80
+1    , data card
+2-4  , unknown (maybe ISP's local network)
+5-7  , TATA (India)
+8-14 , Google Inc.
+
+
+Facebook, 173.252.88.66
+1    , data card
+2-4  , unknown (maybe ISP's local network)
+5-8  , TATA (India)
+9-11 , TATA (Europe)
+12-15, Abovenet Communications
+16-25, Facebook Inc.
