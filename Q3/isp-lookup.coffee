@@ -14,20 +14,21 @@ getISP = (ip,cb)->
     else
       cb(err);
   )
-input = fs.readFileSync('isptracert.txt','utf8');
-output= input;
-delta=0;
+inputs = fs.readFileSync('isptracert.txt','utf8');
 regex=/[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}/gi
-
-while ipres=regex.exec(input)
-  ip=ipres[0];
-  index=ipres.index;
-  getISP(ip,do (index)->
-    (err,data)->
-      # console.log(data);
-      insertion="#{data.org ? 'unknown'}-";
-      output=output.insertAt(index+delta,insertion);
-      delta += insertion.length;
-      fs.writeFileSync('ispoutput.txt',output);
-  );
-  # console.log(ip,index);
+inputs = inputs.split("\n");
+outputs= inputs;
+line=0;
+for input in inputs
+  while ipres=regex.exec(input)
+    ip=ipres[0];
+    index=ipres.index;
+    getISP(ip,do (index,line)->
+      (err,data)->
+        # console.log(data);
+        insertion=" - #{data.org ? 'unknown'}";
+        outputs[line]= (outputs[line])[0..-2] + insertion
+        fs.writeFileSync('output.txt',outputs.join("\n"));
+    );
+    # console.log(ip,index);
+  line++;

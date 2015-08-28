@@ -1,0 +1,7 @@
+ETHZ (Switzerland): 129.132.19.216
+University of Waterloo (Canada east): 129.97.208.23
+University of Cape Town (South Africa): 137.158.158.44
+IIT Delhi (India): 103.27.9.20
+
+Google: 173.194.36.80
+Facebook: 173.252.88.66
