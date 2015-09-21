@@ -44,20 +44,40 @@ fun3 = ->
 fun3()
 console.log(different_type_objects)
 
-# referrer = {}
 
-# fun4 = ->
-# 	entries = data.log.entries
-# 	i=0
-# 	for entry in entries
-# 		refer = entry.request.headers[5].value
-# 		console.log(i)
-# 		console.log(refer)
-# 		i++
-# 		if referrer[refer]?
-# 			referrer[refer]++
-# 		else
-# 			referrer[refer]=1
+class Tree
+	url : null
+	object : null
+	children : null
+	constructor: (@url,@object) ->
+		@children = []
 
-# fun4()
-# console.log(referrer)
+tree = new Tree(data.log.entries[0].request.url,data.log.entries[0])
+tmp={}
+
+fun4 = ->
+	arr = data.log.entries
+	for entry in arr
+		if arr.indexOf(entry) is 0
+			continue
+		if entry.request.headers[5].name isnt "Referer"
+			continue
+		if tmp[entry.request.headers[5].value]?
+			tmp[entry.request.headers[5].value].push entry
+		else
+			tmp[entry.request.headers[5].value]=[entry]
+	makeTree(tree)
+
+makeTree = (t) ->
+	url = t.url
+	if tmp[url]?
+		for obj in tmp[url]
+			tmp_tree=new Tree(obj.request.url,obj)
+			t.children.push tmp_tree
+			makeTree(tmp_tree)
+		delete tmp[url]
+
+
+fun4()
+console.log tmp
+console.log tree
