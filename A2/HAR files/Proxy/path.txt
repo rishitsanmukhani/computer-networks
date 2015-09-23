@@ -1,0 +1,1 @@
+tshark -r nytimes.pcap -Y "ip.dst == 170.149.172.130 && http" -T fields -e ip.src -e ip.dst -e tcp.port -e _ws.col.Info -e frame.number
