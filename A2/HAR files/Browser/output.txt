@@ -1,0 +1,20 @@
+Connected successfully
+Received:
+HTTP/1.1 408 Request Time-out
+Date: Tue, 29 Sep 2015 05:02:06 GMT
+Server: Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1
+Vary: Accept-Encoding
+Content-Length: 351
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>408 Request Time-out</title>
+</head><body>
+<h1>Request Time-out</h1>
+<p>Server timeout waiting for the HTTP request from the client.</p>
+<hr>
+<address>Apache/2.2.22 (Ubuntu) mod_fcgid/2.3.6 mod_ssl/2.2.22 OpenSSL/1.0.1 Server at www.iitd.ernet.in Port 80</address>
+</body></html>
+

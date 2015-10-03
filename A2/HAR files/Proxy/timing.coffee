@@ -95,6 +95,7 @@ fun2 = ->
     else
       cb(null,false)
   ,(err,res)->
+    console.log(tcp_connections);
     fs.writeFileSync("tcp_connection.txt","",'utf8')
     for k of tcp_connections
       fs.appendFileSync("tcp_connection.txt","Domain Name: "+k+"\n\n",'utf8')
