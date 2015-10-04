@@ -32,7 +32,7 @@ makeTree = (tree,referer_tree) ->
     delete referer_tree[url]
 
 DFS = (tree,nid,pid) ->
-  str = "#{nid},#{tree.url},#{pid}\n"
+  str = "\"#{nid}\",\"#{tree.url}\",\"#{pid}\"\n"
   fs.appendFileSync("object_tree.csv",str)
   id=_.clone(nid)
   for child in tree.children
@@ -58,7 +58,7 @@ fun4 = ->
   makeTree(object_tree,referer_tree)
   fs.writeFileSync("object_tree.csv","")
   DFS(object_tree,1,-1)
-# fun4()
+fun4()
 
 printDownloadTree = (tcp_connections)->
   fs.writeFileSync("download_tree.csv","")
@@ -66,7 +66,7 @@ printDownloadTree = (tcp_connections)->
     for key of tcp_connections[k]
       arr=tcp_connections[k][key]
       for a in arr
-        str=k+","+key+","+a.request.url+"\n"
+        str='"'+k+"\",\""+key+"\",\""+a.request.url+"\"\n"
         fs.appendFileSync("download_tree.csv",str)
 
 fun5 = ->
