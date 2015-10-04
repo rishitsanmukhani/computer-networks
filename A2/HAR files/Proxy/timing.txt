@@ -1,4 +1,0 @@
-Download time : 50905
-[ 'Standard query 0xe18f  A www.nytimes.com',
-  'Standard query 0x7cf9  A www.nytimes.com' ]
-[ '0xe18f', '0x7cf9' ]

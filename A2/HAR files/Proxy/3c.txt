@@ -1618,50 +1618,6 @@ Active Percentage : 0
 Idle Percentage : 100
 
 
-Domain Name: apiservices.krxd.net
-
-New connections:
-PORT = 3775
-Active Time = 12.474967000
-Active Percentage : 0
-Idle Percentage : 100
-
-
-New connections:
-PORT = 3779
-Active Time = 13.539603000
-1 -> http://apiservices.krxd.net/user_data/segments/3?pubid=79816aa8-435a-471a-be83-4b3e0946daf2&callback=Krux.ns._default.kxjsonp_userData
-Timing
-Connect: 484
-Waiting: 344
-Receive: 0
-Send: 0
-Active Percentage : 2.5406948785721415
-Idle Percentage : 97.45930512142786
-
-
-New connections:
-PORT = 3807
-Active Time = 16.334504000
-1 -> http://apiservices.krxd.net/user_data/segments/3?pubid=79816aa8-435a-471a-be83-4b3e0946daf2&callback=Krux.ns._default.kxjsonp_userData
-Timing
-Connect: 484
-Waiting: 344
-Receive: 0
-Send: 0
-Active Percentage : 2.1059715066952753
-Idle Percentage : 97.89402849330473
-
-
-Domain Name: api.bizographics.com
-
-New connections:
-PORT = 3663
-Active Time = 13.159250000
-Active Percentage : 0
-Idle Percentage : 100
-
-
 Domain Name: pix04.revsci.net
 
 New connections:
@@ -1745,42 +1701,6 @@ Active Percentage : 2.19551360031142
 Idle Percentage : 97.80448639968859
 
 
-Domain Name: krxd.nexac.com
-
-New connections:
-PORT = 3784
-Active Time = 13.615513000
-Active Percentage : 0
-Idle Percentage : 100
-
-
-New connections:
-PORT = 3806
-Active Time = 17.458510000
-Active Percentage : 0
-Idle Percentage : 100
-
-
-Domain Name: s.ixiaa.com
-
-New connections:
-PORT = 3785
-Active Time = 13.594751000
-Active Percentage : 0
-Idle Percentage : 100
-
-
-Domain Name: adadvisor.net
-
-Domain Name: loadm.exelator.com
-
-New connections:
-PORT = 3787
-Active Time = 13.620076000
-Active Percentage : 0
-Idle Percentage : 100
-
-
 Domain Name: p.acxiom-online.com
 
 New connections:
@@ -1794,15 +1714,6 @@ Receive: 0
 Send: 0
 Active Percentage : 3.2733650852243446
 Idle Percentage : 96.72663491477566
-
-
-Domain Name: p.rfihub.com
-
-New connections:
-PORT = 3788
-Active Time = 15.852709000
-Active Percentage : 0
-Idle Percentage : 100
 
 
 Domain Name: ib.adnxs.com
@@ -1820,13 +1731,39 @@ Active Percentage : 1.618523237226803
 Idle Percentage : 98.3814767627732
 
 
-Domain Name: i.w55c.net
+Domain Name: apiservices.krxd.net
 
 New connections:
-PORT = 3790
-Active Time = 13.753271000
+PORT = 3775
+Active Time = 12.474967000
 Active Percentage : 0
 Idle Percentage : 100
+
+
+New connections:
+PORT = 3779
+Active Time = 13.539603000
+1 -> http://apiservices.krxd.net/user_data/segments/3?pubid=79816aa8-435a-471a-be83-4b3e0946daf2&callback=Krux.ns._default.kxjsonp_userData
+Timing
+Connect: 484
+Waiting: 344
+Receive: 0
+Send: 0
+Active Percentage : 2.5406948785721415
+Idle Percentage : 97.45930512142786
+
+
+New connections:
+PORT = 3807
+Active Time = 16.334504000
+1 -> http://apiservices.krxd.net/user_data/segments/3?pubid=79816aa8-435a-471a-be83-4b3e0946daf2&callback=Krux.ns._default.kxjsonp_userData
+Timing
+Connect: 484
+Waiting: 344
+Receive: 0
+Send: 0
+Active Percentage : 2.1059715066952753
+Idle Percentage : 97.89402849330473
 
 
 Domain Name: ads.dynamicyield.com
@@ -1845,31 +1782,6 @@ Active Percentage : 10.346048642118088
 Idle Percentage : 89.65395135788191
 Average goodput : 68
 Maximum goodput : 68
-
-
-Domain Name: px.dynamicyield.com
-
-New connections:
-PORT = 3795
-Active Time = 15.536302000
-Active Percentage : 0
-Idle Percentage : 100
-
-
-New connections:
-PORT = 3803
-Active Time = 24.827456000
-Active Percentage : 0
-Idle Percentage : 100
-
-
-Domain Name: cm.g.doubleclick.net
-
-New connections:
-PORT = 3712
-Active Time = 14.257405000
-Active Percentage : 0
-Idle Percentage : 100
 
 
 Domain Name: load.s3.amazonaws.com
