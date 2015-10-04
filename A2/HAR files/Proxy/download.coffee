@@ -4,6 +4,7 @@ net = require('net')
 fs = require('fs')
 URL = require('url')
 crypto = require('crypto')
+exec = require('child_process').exec
 
 if !Buffer::indexOf
   Buffer::indexOf = (needle) ->
@@ -27,7 +28,7 @@ if !Buffer::indexOf
       ++i
     -1
 
-download= (url,opt,cb)->
+requestObject = (url,opt,cb)->
   if (typeof opt) == 'function'
     cb=opt
     opt=null
@@ -49,95 +50,21 @@ download= (url,opt,cb)->
     filename+='.html'
   filename = './'+url.hostname+'/'+crypto.createHash('md5').update(url.href).digest("hex")[0..7]+filename
   fs.access(filename,(err)->
-    callbackDone=false
+    callbackDone = false
     if(!err)
       console.log("Using #{url.href} from cache");
-      return cb()
+      return cb(null,filename)
     sendRequest = () ->
       console.log("Sending request to #{url.host} for #{url.path}")
       client.write("GET #{url.path} HTTP/1.1\r\n")
       client.write("Host: #{url.hostname}\r\n")
+      if(opt.referrer)
+        client.write("Referer: #{opt.referrer}\r\n")
       client.write("Accept-Encoding: gzip\r\n")
       client.write("\r\n")
-      buffer=""
-      headers={}
-      status=""
-      headersDone=false
-      bodyDone=false
-      body=new Buffer(0)
-      parsedBody=[]
-      chunkLength=-1
-      partialChunk=false
-
-      client.on('data',(data)->
-        console.log(".")
-        if(bodyDone)
-          console.log "excess data!"
-          return;
-        if(headersDone)
-          body=Buffer.concat([body,data]);
-        else
-          oldLength=buffer.length
-          buffer+=data.toString('utf8');
-          i=buffer.indexOf('\r\n\r\n')
-          if(i!=-1)
-            lines=buffer[0...i].split('\r\n');
-            status=lines[0]
-            lines=lines[1..]
-            for h in lines
-              [key,val]=h.split(': ');
-              headers[key.toLowerCase()]=val
-            headersDone=true
-            body=data[i+4-oldLength..]
-        if(headersDone)
-          if(headers['content-length']?)
-            expectedLength=parseInt(headers['content-length'])
-            if(body.length >= expectedLength)
-              parsedBody=[body[0...expectedLength]]
-              body=body[expectedLength..]
-              bodyDone=true
-          else if(headers['transfer-encoding']=='chunked')
-            parseChunk = ->
-              if(chunkLength!=-1)
-                if(body.length>=chunkLength)
-                  chunk=body[0...chunkLength]
-                  parsedBody.push(chunk)
-                  body=body[chunkLength..]
-                  console.log("chunk found: ",chunk.length,chunkLength);
-                  partialChunk=true
-                if(partialChunk && body.indexOf('\r\n')==0)
-                  if(chunkLength==0) #final chunk
-                    bodyDone=true
-                  chunkLength=-1
-                  body=body[2..]
-                  partialChunk=false
-              if(chunkLength==-1)
-                i=body.indexOf('\r\n')
-                if(i!=-1)
-                  chunkHeader=body[0...i]
-                  console.log("chunk header: ",chunkHeader.toString())
-                  chunkLength=parseInt(chunkHeader.toString(),16);
-                  body=body[i+2..]
-                  parseChunk()
-            parseChunk()
-          else
-            console.log("Unsupported encoding or content-length not found.")
-            console.log(headers)
-            bodyDone=true
-
-        if(bodyDone && !callbackDone)
-          parsedBody=Buffer.concat(parsedBody)
-          console.log status
-          console.log headers
-          console.log parsedBody.length
-          fs.mkdir('./'+url.hostname,(err)->
-            fs.writeFile(filename,parsedBody,(err)->
-              console.log("Written #{filename}");
-              callbackDone=true
-              cb(err,client)
-            );
-          )
-      )
+      if(!callbackDone)
+        callbackDone=true
+        cb(null,filename,client)
     if(opt.socket)
       client=opt.socket
       sendRequest();
@@ -147,6 +74,7 @@ download= (url,opt,cb)->
       client.connect(url.port,url.hostname,sendRequest);
       client.on('error',(err)->
         bodyDone=true
+        client.destroy();
         console.log("Connection error:",err)
         console.log("while processing: "+url.href);
         if(!callbackDone)
@@ -155,6 +83,95 @@ download= (url,opt,cb)->
       )
   )
 
+
+receiveObject = (filename,url,client, body, cb)->
+  buffer=""
+  headers={}
+  status=""
+  headersDone=false
+  bodyDone=false
+  parsedBody=[]
+  chunkLength=-1
+  partialChunk=false
+  callbackDone = false
+  onData = (data)->
+    console.log("Receiving #{url.href[0...23]}...")
+    if(headersDone)
+      body=Buffer.concat([body,data]);
+    else
+      oldLength=buffer.length
+      buffer+=data.toString('utf8');
+      i=buffer.indexOf('\r\n\r\n')
+      if(i!=-1)
+        lines=buffer[0...i].split('\r\n');
+        status=lines[0]
+        lines=lines[1..]
+        for h in lines
+          [key,val]=h.split(': ');
+          headers[key.toLowerCase()]=val
+        headersDone=true
+        body=data[i+4-oldLength..]
+    if(headersDone)
+      if(headers['content-length']?)
+        expectedLength=parseInt(headers['content-length'])
+        if(body.length >= expectedLength)
+          parsedBody=[body[0...expectedLength]]
+          body=body[expectedLength..]
+          bodyDone=true
+      else if(headers['transfer-encoding']=='chunked')
+        parseChunk = ->
+          if(chunkLength!=-1)
+            if(body.length>=chunkLength)
+              chunk=body[0...chunkLength]
+              parsedBody.push(chunk)
+              body=body[chunkLength..]
+              console.log("chunk found: ",chunk.length,chunkLength);
+              partialChunk=true
+            if(partialChunk && body.indexOf('\r\n')==0)
+              if(chunkLength==0) #final chunk
+                bodyDone=true
+              chunkLength=-1
+              body=body[2..]
+              partialChunk=false
+          if(chunkLength==-1)
+            i=body.indexOf('\r\n')
+            if(i!=-1)
+              chunkHeader=body[0...i]
+              console.log("chunk header: ",chunkHeader.toString())
+              chunkLength=parseInt(chunkHeader.toString(),16);
+              body=body[i+2..]
+              parseChunk()
+        parseChunk()
+      else
+        console.log("Unsupported encoding or content-length not found.")
+        console.log(headers)
+        bodyDone=true
+
+    if(bodyDone && !callbackDone)
+      callbackDone=true;
+      client.removeListener('data',onData);
+      parsedBody=Buffer.concat(parsedBody)
+      console.log status
+      # console.log headers
+      console.log parsedBody.length
+      fs.mkdir('./'+url.hostname,(err)->
+        if(headers['content-encoding']=='gzip')
+          filename+='.gz'
+        fs.writeFile(filename,parsedBody,(err)->
+          console.log("Written #{filename}");
+          cb(err,body)
+          if(headers['content-encoding']=='gzip')
+            console.log("Gunzipping #{filename}..")
+            exec("gunzip #{filename}",(error, stdout, stderr)->
+              if(!error)
+                console.log("gunzipped.");
+              else
+                console.log("gunzip failed: ",error);
+            )
+
+        );
+      )
+  client.on('data',onData);
 
 MAX_CONNECTIONS = 20
 MAX_CONNECTIONS_PER_SERVER = 10
@@ -166,20 +183,74 @@ class Connection
     @queue = []
     @queued = []
     @socket = null
-  req: (url,cb)->
-    url = URL.parse(url)
+    @receiving = false
+    @numQueued = 0
+    @numActive = 0
+    @onReceive = ()->null
+    @onStopReceive = ()->null
+    @processing = false
+  push: (url,referrer,cb)->
+    if(typeof url == 'string')
+      url = URL.parse(url)
     if @domain == ""
       @domain = url.hostname
     if @domain != url.hostname
       return cb("Hostname must be same for a single connection")
-    queue.push({url:url,cb:cb})
+    @numQueued++
+    @queue.push({url:url,referrer:referrer,cb:cb})
+    @process()
+  checkLimit: ()->
+    MAX_OBJECTS_PER_CONNECTION <= @numQueued
+  receive: ()->
+    body = new Buffer(0)
+    @receiving=true;
+    @onReceive();
+    receiveOne = ()=>
+      if(@queued.length==0)
+        @receiving=false
+        @onStopReceive()
+        @process()
+        return
+      front=@queued[0]
+      receiveObject(front.filename,front.url,@socket,body,(err,newbody)=>
+        body=newbody
+        @queued.shift();
+        @numActive--;
+        receiveOne()
+        front.cb();
+        # if(!@
+      )
+    receiveOne()
   process: ()->
-    while MAX_CONNECTIONS_PER_SERVER > queued.length
-      job=queue.pop()
-      queued.push(job)
+    if(@processing) #dont start multiple instances
+      return
+    @processing = true
+    while MAX_OBJECTS_PER_CONNECTION > @numActive
+      if(@queue.length==0)
+        @processing = false
+        return;
+      front=@queue.pop()
+      @numActive++
+      requestObject(front.url,{socket: @socket, referrer: front.referrer},(err,filename,socket)=>
+        if(!socket)
+          front.cb()
+          return;
+        front.filename=filename
+        @queued.push(front);
+        if(!@socket)
+          @socket=socket
+        if(!@receiving)
+          @receive()
+      )
 
+connections = {}
+freeConnections= ()->
+  for domain,cons of connections
+    for con in cons
+      if con.socket
+        con.socket.end()
 class TreeNode
-  constructor: (@id,@url,@children=[]) ->
+  constructor: (@id,@url,@referrer="",@children=[]) ->
   addChild: (child)->
     @children.push(child)
   toString: (indent=0)->
@@ -194,6 +265,32 @@ class TreeNode
       out += child.toString(indent+4)
     # out += "\n#{space}"
     out
+  process: (cb)->
+    url = URL.parse(@url)
+    if(!connections[url.hostname]?)
+      connections[url.hostname]=[]
+    pool = connections[url.hostname]
+    best = null
+    length = 1000
+    for con in pool
+      len = con.numActive + con.queue.length
+      if minLen > len
+        minLen=len
+        best=con
+    if !best || (best.checkLimit() && pool.length< MAX_CONNECTIONS_PER_SERVER)
+      best = new Connection()
+      # best.onStopReceive =
+      pool.push(best)
+    best.push(url,@referrer,()=>
+      if @children.length
+        async.map(@children, (child,cb)=>
+          child.process(cb)
+        ,(err)->
+          cb(err)
+        )
+      else
+        cb();
+    )
 
 if process.argv.length < 3
   console.log('Usage: node download <object-tree-csv>');
@@ -219,6 +316,7 @@ try
       objTree=node
     if(parent != '-1')
       objTreeIndex[parent].addChild(node);
+      node.referrer=objTreeIndex[parent].url;
   objTreeCsv = null
   # console.log(objTreeIndex['1'])
   console.log(objTree.toString())
@@ -228,15 +326,19 @@ try
     process.chdir(targetDir);
     console.log("Working directory: "+targetDir);
     # for id,obj of objTreeIndex
-    async.map(objTreeIndex, (obj,cb)->
-      download(obj.url,(err,socket)->
-        if(socket)
-          socket.end();
-        cb();
-      );
-    ,(err)->
-      console.log("done all!")
-    );
+    objTree.process((err)->
+      console.log("Done All!");
+      freeConnections()
+    )
+    # async.map(objTreeIndex, (obj,cb)->
+    #   download(obj.url,(err,socket)->
+    #     if(socket)
+    #       socket.end();
+    #     cb();
+    #   );
+    # ,(err)->
+    #   console.log("done all!")
+    # );
 
     # download('http://theappbin.com/asd.txt',(err,socket)->
     #   if(socket)
