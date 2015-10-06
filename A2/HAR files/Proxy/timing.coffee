@@ -76,7 +76,7 @@ funDNSTime = ->
         fs.appendFileSync("dns.txt",str)
     )
   );
-# funDNSTime()
+funDNSTime()
 
 tcp_connections={}
 fun = ->
@@ -115,14 +115,10 @@ fun = ->
     else
       cb(null,false)
   ,(err,res)->
-    str=JSON.stringify(tcp_connections)
-    fs.writeFileSync("json.txt",str)
-    # console.log(tcp_connections)
-    # funTCP(tcp_connections,url_object)
-    # funQue3a(tcp_connections)
-    # funBrowser(tcp_connections)
+    funTCP(tcp_connections,url_object)
+    funQue3a(tcp_connections)
+    funBrowser(tcp_connections)
   );
-
 fun()
 
 funQue3a = (tcp_connections)->
@@ -189,6 +185,7 @@ funTCP = (tcp_connections,url_object)->
   total_receive_time_network=0
   maximum_goodput_network=0
   _str1=_str2=""
+  _str3=""
   for k of tcp_connections
     fs.appendFileSync("3c.txt","Domain Name: "+k+"\n\n",'utf8')
     for key of tcp_connections[k]
@@ -229,6 +226,7 @@ funTCP = (tcp_connections,url_object)->
         str+="Average goodput : "+(total_data/total_receive_time)+"\n"
         _str1+=total_data/total_receive_time+"\n"
         str+="Maximum goodput : "+max_object_size/receive_time+"\n"
+        _str3+=max_object_size/receive_time+", "+k+"\n"
         _str2+=max_object_size/receive_time+"\n"
         if(max_object_size/receive_time>maximum_goodput_network)
           maximum_goodput_network=max_object_size/receive_time
@@ -239,6 +237,7 @@ funTCP = (tcp_connections,url_object)->
   fs.appendFileSync("3c.txt",str+"\n\n",'utf8')
   fs.appendFileSync("data.csv",_str1+"\n\n")
   fs.appendFileSync("data.csv",_str2+"\n\n")
+  fs.writeFileSync("goodput.csv",_str3)
 
 getEndTimes = (arr)->
   start=-1
