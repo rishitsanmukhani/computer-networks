@@ -53,9 +53,9 @@ requestObject = (url,opt,cb)->
     callbackDone = false
     if(!err)
       console.log("Using #{url.href} from cache");
-      return cb(null,filename)
+      return cb(null,filename,true)
     sendRequest = () ->
-      console.log("Sending request to #{url.host} for #{url.path}")
+      console.log("Sending request to #{url.host} for ",if url.path.length>40 then "#{url.path[0...17]}...#{url.path[-20..]}" else url.path)
       client.write("GET #{url.path} HTTP/1.1\r\n")
       client.write("Host: #{url.hostname}\r\n")
       if(opt.referrer)
@@ -64,23 +64,12 @@ requestObject = (url,opt,cb)->
       client.write("\r\n")
       if(!callbackDone)
         callbackDone=true
-        cb(null,filename,client)
+        cb(null,filename,false)
     if(opt.socket)
       client=opt.socket
       sendRequest();
     else
-      client = new net.Socket();
-      console.log("Connecting to "+url.hostname);
-      client.connect(url.port,url.hostname,sendRequest);
-      client.on('error',(err)->
-        bodyDone=true
-        client.destroy();
-        console.log("Connection error:",err)
-        console.log("while processing: "+url.href);
-        if(!callbackDone)
-          callbackDone=true
-          cb(err);
-      )
+      return cb("Must pass a valod socket!");
   )
 
 
@@ -95,7 +84,8 @@ receiveObject = (filename,url,client, body, cb)->
   partialChunk=false
   callbackDone = false
   onData = (data)->
-    console.log("Receiving #{url.href[0...23]}...")
+    # console.log("Receiving #{url.href[0...23]}...")
+    process.stdout.write('.');
     if(headersDone)
       body=Buffer.concat([body,data]);
     else
@@ -154,43 +144,58 @@ receiveObject = (filename,url,client, body, cb)->
       console.log status
       # console.log headers
       console.log parsedBody.length
-      fs.mkdir('./'+url.hostname,(err)->
-        if(headers['content-encoding']=='gzip')
-          filename+='.gz'
-        fs.writeFile(filename,parsedBody,(err)->
-          console.log("Written #{filename}");
-          cb(err,body)
+      if(parsedBody.length>0)
+        fs.mkdir('./'+url.hostname,(err)->
           if(headers['content-encoding']=='gzip')
-            console.log("Gunzipping #{filename}..")
-            exec("gunzip #{filename}",(error, stdout, stderr)->
-              if(!error)
-                console.log("gunzipped.");
-              else
-                console.log("gunzip failed: ",error);
-            )
+            filename+='.gz'
+          fs.writeFile(filename,parsedBody,(err)->
+            shortname=if filename.length>50 then "#{filename[0...22]}...#{filename[-25..]}" else filename
+            console.log("Written #{shortname}")
+            cb(err,body)
+            if(headers['content-encoding']=='gzip')
+              console.log("Gunzipping #{shortname}..")
+              exec("gunzip #{filename}",(error, stdout, stderr)->
+                if(!error)
+                  console.log("gunzipped.");
+                else
+                  console.log("gunzip failed: ",error);
+              )
 
-        );
-      )
+          );
+        )
+      else
+        cb(null,body);
   client.on('data',onData);
 
 MAX_CONNECTIONS = 20
-MAX_CONNECTIONS_PER_SERVER = 10
-MAX_OBJECTS_PER_CONNECTION = 5
+MAX_CONNECTIONS_PER_SERVER = 5
+MAX_OBJECTS_PER_CONNECTION = 1
 
 class Connection
-  constructor: ()->
-    @domain = ""
+  constructor: (url,cb)->
     @queue = []
     @queued = []
-    @socket = null
+    if (typeof url) == 'string'
+      url=URL.parse(url)
+    if(!url.port)
+      url.port='80'
+    url.port = parseInt(url.port)
+    @domain = url.hostname
     @receiving = false
     @numQueued = 0
     @numActive = 0
     @onReceive = ()->null
     @onStopReceive = ()->null
     @processing = false
+    @socket = new net.Socket();
+    console.log("Connecting to "+@domain);
+    @socket.connect(url.port,url.hostname,cb);
+    @socket.on('error',(err)=>
+      @socket.destroy();
+      console.log("Connection error: ",err)
+    )
   push: (url,referrer,cb)->
-    if(typeof url == 'string')
+    if(typeof url) == 'string'
       url = URL.parse(url)
     if @domain == ""
       @domain = url.hostname
@@ -231,14 +236,12 @@ class Connection
         return;
       front=@queue.pop()
       @numActive++
-      requestObject(front.url,{socket: @socket, referrer: front.referrer},(err,filename,socket)=>
-        if(!socket)
+      requestObject(front.url,{socket: @socket, referrer: front.referrer},(err,filename,cached)=>
+        if(cached)
           front.cb()
           return;
         front.filename=filename
         @queued.push(front);
-        if(!@socket)
-          @socket=socket
         if(!@receiving)
           @receive()
       )
@@ -271,26 +274,30 @@ class TreeNode
       connections[url.hostname]=[]
     pool = connections[url.hostname]
     best = null
-    length = 1000
+    # minLen = 100000
     for con in pool
-      len = con.numActive + con.queue.length
+      len = con.numActive #+ con.queued.length
       if minLen > len
         minLen=len
         best=con
+    proceed = ()=>
+      best.push(url,@referrer,()=>
+        if @children.length
+          async.map(@children, (child,cb)=>
+            child.process(cb)
+          ,(err)->
+            cb(err)
+          )
+        else
+          cb();
+      )
     if !best || (best.checkLimit() && pool.length< MAX_CONNECTIONS_PER_SERVER)
-      best = new Connection()
+      best = new Connection(url,proceed)
       # best.onStopReceive =
       pool.push(best)
-    best.push(url,@referrer,()=>
-      if @children.length
-        async.map(@children, (child,cb)=>
-          child.process(cb)
-        ,(err)->
-          cb(err)
-        )
-      else
-        cb();
-    )
+      console.log("New Connection (#{pool.length} total) for #{url.hostname}")
+    else
+      proceed()
 
 if process.argv.length < 3
   console.log('Usage: node download <object-tree-csv>');
