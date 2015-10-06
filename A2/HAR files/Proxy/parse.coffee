@@ -3,17 +3,33 @@ _ = require('lodash')
 async = require 'async'
 {spawn,exec} = require 'child_process'
 
-input = fs.readFileSync('www.nytimes.com.har','utf8');
+if(process.argv.length < 4)
+  console.log('Usage: node download <har-file> <pcap-file>');
+  return process.exit(1);
+har=process.argv[2]
+pcap=process.argv[3]
+
+input = fs.readFileSync(har,'utf8');
 
 data = JSON.parse(input);
 
-urlDomain = (url) ->
-  if (url.indexOf("://") > -1)
-    domain = url.split('/')[2];
-  else
-    domain = url.split('/')[0];
-  domain = domain.split(':')[0];
-  return domain;
+differentResponse = ->
+  fs.writeFileSync("http_response.txt","")
+  response={}
+  arr = data.log.entries
+  str="Objects with Status==200 OK but null body:\n"
+  for a in arr
+    status=a.response.status
+    if(not response[status]?)
+      response[status]=0
+    response[status]++
+    if(status==200 && a.response.bodySize<=0)
+      str+=arr.indexOf(a)+" - "+a.request.headers[0].value+"\n"
+  str+="\nDifferent http response:\n"
+  for key of response
+    str+=key+" - "+response[key]+"\n"
+  fs.appendFileSync("http_response.txt",str)
+differentResponse()
 
 class ObjectTree
   url : null
@@ -82,7 +98,7 @@ fun5 = ->
     domain_name=entry.request.headers[0].value
     if(not tcp_connections[domain_name]?)
       tcp_connections[domain_name]={}
-      command="tshark -r nytimes.pcap -Y \"http && http.host contains #{domain_name}\" -T fields -e tcp.stream -e _ws.col.Info"
+      command="tshark -r #{pcap} -Y \"http && http.host contains #{domain_name}\" -T fields -e tcp.stream -e _ws.col.Info"
       cmd = exec(command)
       all_data=""
       cmd.stdout.on('data',(data) -> all_data+=data.toString())
