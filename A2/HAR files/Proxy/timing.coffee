@@ -3,7 +3,16 @@ _ = require('lodash')
 async = require('async')
 {spawn,exec} = require 'child_process'
 
-input = fs.readFileSync('www.nytimes.com.har','utf8')
+if(process.argv.length < 4)
+  console.log('Usage: node download <har-file> <pcap-file>');
+  return process.exit(1);
+har=process.argv[2]
+pcap=process.argv[3]
+srcip="192.168.0.2"
+if(har=="www.vox.com.har")
+  srcip="192.168.0.4"
+
+input = fs.readFileSync(har,'utf8')
 data = JSON.parse(input);
 fs.writeFileSync("data.csv","",'utf8')
 
@@ -25,7 +34,7 @@ funDNSTime = ->
   uniq_domains=_.uniq(_.map(entries,(n)->n.request.headers[0].value))
   async.forEach(uniq_domains,(domain,cb)->
     domains_dns_time[domain]=[]
-    str="tshark -r nytimes.pcap -Y \"dns && ip.src==192.168.0.2\" -T fields -e dns.id -e _ws.col.Info | grep #{domain}"
+    str="tshark -r #{pcap} -Y \"dns && ip.src==#{srcip}\" -T fields -e dns.id -e _ws.col.Info | grep #{domain}"
     cmd = exec(str)
     all_data=""
     cmd.stdout.on('data',(data)->
@@ -41,7 +50,7 @@ funDNSTime = ->
     )
   ,(err,res)->
     id_dns_time={}
-    str="tshark -r nytimes.pcap -Y \"dns && ip.dst==192.168.0.2\" -T fields -e dns.id -e dns.time -e dns.cname"
+    str="tshark -r #{pcap} -Y \"dns && ip.dst==#{srcip}\" -T fields -e dns.id -e dns.time -e dns.cname"
     cmd = exec(str)
     all_data=""
     cmd.stdout.on('data',(data)->
@@ -67,6 +76,7 @@ funDNSTime = ->
         fs.appendFileSync("dns.txt",str)
     )
   );
+funDNSTime()
 
 tcp_connections={}
 fun = ->
@@ -83,7 +93,7 @@ fun = ->
     domain_name=entry.request.headers[0].value
     if(not tcp_connections[domain_name]?)
       tcp_connections[domain_name]={}
-      command="tshark -r nytimes.pcap -Y \"http && http.host contains #{domain_name}\" -T fields -e tcp.port -e frame.time_relative -e _ws.col.Info"
+      command="tshark -r #{pcap} -Y \"http && http.host contains #{domain_name}\" -T fields -e tcp.port -e frame.time_relative -e _ws.col.Info"
       cmd = exec(command)
       all_data=""
       cmd.stdout.on('data',(data) -> all_data+=data.toString())
@@ -208,6 +218,8 @@ funTCP = (tcp_connections,url_object)->
       total_data_network+=total_data
       total_receive_time_network+=total_receive_time
       active_percentage=(total_time)/(1000*active_time)
+      if(active_percentage>=1)
+        active_percentage=1
       str="Active Percentage : "+100*active_percentage+"\n"
       str+="Idle Percentage : "+100*(1-active_percentage)+"\n"
       if(total_receive_time>0)
