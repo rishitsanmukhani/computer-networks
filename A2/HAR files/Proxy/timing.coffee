@@ -76,7 +76,7 @@ funDNSTime = ->
         fs.appendFileSync("dns.txt",str)
     )
   );
-funDNSTime()
+# funDNSTime()
 
 tcp_connections={}
 fun = ->
@@ -115,9 +115,12 @@ fun = ->
     else
       cb(null,false)
   ,(err,res)->
-    funTCP(tcp_connections,url_object)
-    funQue3a(tcp_connections)
-    funBrowser(tcp_connections)
+    str=JSON.stringify(tcp_connections)
+    fs.writeFileSync("json.txt",str)
+    # console.log(tcp_connections)
+    # funTCP(tcp_connections,url_object)
+    # funQue3a(tcp_connections)
+    # funBrowser(tcp_connections)
   );
 
 fun()
