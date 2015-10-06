@@ -3,12 +3,12 @@ _ = require('lodash')
 async = require('async')
 {spawn,exec} = require 'child_process'
 
-input = fs.readFileSync('www.nytimes.com.har','utf8');
-
+input = fs.readFileSync('www.nytimes.com.har','utf8')
 data = JSON.parse(input);
+fs.writeFileSync("data.csv","",'utf8')
 
-download_time=0
 funDownloadTime = ->
+  download_time=0
   entries = data.log.entries
   end_time = 0;
   for entry in entries
@@ -16,8 +16,8 @@ funDownloadTime = ->
     if(start_time+entry.time > end_time)
       end_time=start_time+entry.time
   download_time=(end_time-(new Date(entries[0].startedDateTime)).getTime())
+  console.log("Download time: "+download_time)
 funDownloadTime()
-console.log("Download time: "+download_time)
 
 funDNSTime = ->
   domains_dns_time={}
@@ -107,6 +107,7 @@ fun = ->
   ,(err,res)->
     funTCP(tcp_connections,url_object)
     funQue3a(tcp_connections)
+    funBrowser(tcp_connections)
   );
 
 fun()
@@ -124,11 +125,15 @@ funQue3a = (tcp_connections)->
   str="Different types of objects:\n"
   total=0
   nObjects=0
+  _str=""
   for key of types_of_objects
     str+=(key+" - "+types_of_objects[key]+"\n")
+    _str+=(key+","+types_of_objects[key]+"\n")
     total+=types_of_objects[key]
   str+=("Total - "+total+"\n\n")
   fs.appendFileSync("3a.txt",str)
+  fs.writeFileSync("object_types.csv",_str,'utf8')
+  _str1=_str2=_str3=_str4=""
   for k of tcp_connections
     str=("Domain Name: "+k+"\n")
     num_of_connection=0
@@ -152,16 +157,25 @@ funQue3a = (tcp_connections)->
       total_object_size+=osize
     nObjects+=num_of_objects
     str+=("Connections: "+num_of_connection+"\n")
+    _str1+=num_of_connection+"\n"
     str+=("Total Objects: "+num_of_objects+"\n")
+    _str2+=num_of_objects+"\n"
     str+=("Total Content-size: "+total_content_size+"\n")
     str+=("Total Object-size: "+total_object_size+"\n\n")
+    _str3+=total_object_size+"\n"
     fs.appendFileSync("3a.txt",str)
   str=("\nTotal Objects Downloaded: "+nObjects+"\n")
   fs.appendFileSync("3a.txt",str)
-
+  fs.appendFileSync("data.csv",_str1+"\n\n")
+  fs.appendFileSync("data.csv",_str2+"\n\n")
+  fs.appendFileSync("data.csv",_str3+"\n\n")
 
 funTCP = (tcp_connections,url_object)->
   fs.writeFileSync("3c.txt","",'utf8')
+  total_data_network=0
+  total_receive_time_network=0
+  maximum_goodput_network=0
+  _str1=_str2=""
   for k of tcp_connections
     fs.appendFileSync("3c.txt","Domain Name: "+k+"\n\n",'utf8')
     for key of tcp_connections[k]
@@ -172,7 +186,8 @@ funTCP = (tcp_connections,url_object)->
       total_time=0
       total_data=0
       total_receive_time=0
-      maxi_goodput=0
+      max_object_size=0
+      receive_time=0
       i=0
       for a in arr
         i++
@@ -182,20 +197,92 @@ funTCP = (tcp_connections,url_object)->
         str+=("\nWaiting: "+a.timings.wait)
         str+=("\nReceive: "+a.timings.receive)
         str+=("\nSend: "+a.timings.send)
-        if(a.timings.receive>0)
-          goodput=(a.response.headersSize+a.response.bodySize)/a.timings.receive
-          str+=("\nGoodput: "+goodput)
-          if(goodput>maxi_goodput)
-            maxi_goodput=goodput
+        if(a.timings.receive>0 and (a.response.headersSize + a.response.bodySize)>max_object_size)
+          max_object_size=a.response.headersSize+a.response.bodySize
+          receive_time=a.timings.receive
         total_time += (a.timings.send + a.timings.wait+a.timings.receive)
         total_data += (a.response.headersSize + a.response.bodySize)
         total_receive_time += a.timings.receive
         fs.appendFileSync("3c.txt",str+'\n','utf8')
 
+      total_data_network+=total_data
+      total_receive_time_network+=total_receive_time
       active_percentage=(total_time)/(1000*active_time)
       str="Active Percentage : "+100*active_percentage+"\n"
       str+="Idle Percentage : "+100*(1-active_percentage)+"\n"
       if(total_receive_time>0)
         str+="Average goodput : "+(total_data/total_receive_time)+"\n"
-        str+="Maximum goodput : "+maxi_goodput+"\n"
+        _str1+=total_data/total_receive_time+"\n"
+        str+="Maximum goodput : "+max_object_size/receive_time+"\n"
+        _str2+=max_object_size/receive_time+"\n"
+        if(max_object_size/receive_time>maximum_goodput_network)
+          maximum_goodput_network=max_object_size/receive_time
       fs.appendFileSync("3c.txt",str+"\n\n",'utf8')
+  str="\n"
+  str+="Average goodput(Network) : "+(total_data_network/total_receive_time_network)+"\n"
+  str+="Maximum goodput(Network) : "+maximum_goodput_network+"\n"
+  fs.appendFileSync("3c.txt",str+"\n\n",'utf8')
+  fs.appendFileSync("data.csv",_str1+"\n\n")
+  fs.appendFileSync("data.csv",_str2+"\n\n")
+
+getEndTimes = (arr)->
+  start=-1
+  end=-1
+  for a in arr[1..]
+    st=(new Date(a.startedDateTime)).getTime()
+    if(st<start or start==-1)
+      start=st
+    if(st+a.time>end)
+      end=st+a.time
+  return [start,end]
+
+tcpConnectionSame= (obj,start,end)->
+  ans=0
+  for key of obj
+    if((obj[key]["start"]<=start && obj[key]["end"]>=start) or (obj[key]["start"]<=end && obj[key]["end"]>=end))
+      ans++
+  return ans
+
+tcpConnectionAll= (time_schedule,start,end)->
+  ans=0
+  for k of time_schedule
+    obj=time_schedule[k]
+    for key of obj
+      if((obj[key]["start"]<=start && obj[key]["end"]>=start) or (obj[key]["start"]<=end && obj[key]["end"]>=end))
+        ans++
+  return ans
+
+funBrowser = (tcp_connections)->
+  time_schedule={}
+  for k of tcp_connections
+    time_schedule[k]={}
+    for key of tcp_connections[k]
+      [start,end]=getEndTimes(tcp_connections[k][key])
+      if(start!=-1)
+        time_schedule[k][key]={start,end}
+  fs.writeFileSync("browser_schedule.txt","",'utf8')
+  _str1=""
+  _str2=""
+  for k of time_schedule
+    str="Domain:" + k + "\n";
+    num_same=0
+    num_all=0
+    for key of time_schedule[k]
+      start=time_schedule[k][key]["start"]
+      end=time_schedule[k][key]["end"]
+      time_schedule[k][key]["nTCP_same"]=tcpConnectionSame(time_schedule[k],start,end)
+      time_schedule[k][key]["nTCP_all"]=tcpConnectionAll(time_schedule,start,end)
+      _str1+=time_schedule[k][key]["nTCP_same"]+"\n"
+      _str2+=time_schedule[k][key]["nTCP_all"]+"\n"
+      if(num_same<time_schedule[k][key]["nTCP_same"])
+        num_same=time_schedule[k][key]["nTCP_same"]
+      if(num_all<time_schedule[k][key]["nTCP_all"])
+        num_all=time_schedule[k][key]["nTCP_all"]
+    str+="MaxTCP among same domain: "+num_same+"\n";
+    str+="MaxTCP across domains: "+num_all+"\n\n";
+    fs.appendFileSync("browser_schedule.txt",str)
+  fs.appendFileSync("data.csv",_str1+"\n\n")
+  fs.appendFileSync("data.csv",_str2+"\n\n")
+
+
+  

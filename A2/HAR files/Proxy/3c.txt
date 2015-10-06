@@ -9,7 +9,6 @@ Connect: 0
 Waiting: 390
 Receive: 3016
 Send: 0
-Goodput: 90.95324933687003
 2 -> http://www.nytimes.com/svc/web-products/userinfo-v2.json?_=1410369372998
 Timing
 Connect: 0
@@ -22,7 +21,6 @@ Connect: 0
 Waiting: 517
 Receive: 9625
 Send: 0
-Goodput: 8.85277922077922
 4 -> http://www.nytimes.com/packages/html/recommendations/ad.html
 Timing
 Connect: 0
@@ -44,7 +42,6 @@ Connect: 0
 Waiting: 422
 Receive: 313
 Send: 0
-Goodput: 17.670926517571885
 Active Percentage : 15.355812990014961
 Idle Percentage : 84.64418700998505
 Average goodput : 17.670926517571885
@@ -60,7 +57,6 @@ Connect: 0
 Waiting: 336
 Receive: 727
 Send: 0
-Goodput: 30.323246217331498
 Active Percentage : 11.295061104367957
 Idle Percentage : 88.70493889563204
 Average goodput : 30.323246217331498
@@ -266,18 +262,16 @@ Connect: 0
 Waiting: 16
 Receive: 156
 Send: 0
-Goodput: 263.89102564102564
 2 -> http://a1.nyt.com/assets/homepage/20140908-095808/images/foundation/logos/nyt-logo-379x64.svg
 Timing
 Connect: 0
 Waiting: 93
 Receive: 1
 Send: 0
-Goodput: 3561
 Active Percentage : 3.9937781140959348
 Idle Percentage : 96.00622188590407
 Average goodput : 284.89171974522293
-Maximum goodput : 3561
+Maximum goodput : 263.89102564102564
 
 
 New connections:
@@ -295,7 +289,6 @@ Connect: 0
 Waiting: 65
 Receive: 463
 Send: 0
-Goodput: 134.98488120950324
 3 -> http://a1.nyt.com/assets/homepage/20140908-095808/js/foundation/hosts.js
 Timing
 Connect: 0
@@ -308,7 +301,6 @@ Connect: 0
 Waiting: 16
 Receive: 116
 Send: 0
-Goodput: 469.87068965517244
 5 -> http://a1.nyt.com/assets/homepage/20140908-095808/js/foundation/views/ad-view-manager.js
 Timing
 Connect: 0
@@ -318,7 +310,7 @@ Send: 0
 Active Percentage : 7.712306454734074
 Idle Percentage : 92.28769354526592
 Average goodput : 214.56131260794473
-Maximum goodput : 469.87068965517244
+Maximum goodput : 134.98488120950324
 
 
 New connections:
@@ -330,7 +322,6 @@ Connect: 0
 Waiting: 110
 Receive: 62
 Send: 0
-Goodput: 276.6290322580645
 Active Percentage : 4.271165362636839
 Idle Percentage : 95.72883463736316
 Average goodput : 276.6290322580645
@@ -346,18 +337,16 @@ Connect: 0
 Waiting: 63
 Receive: 16
 Send: 0
-Goodput: 225.9375
 2 -> http://a1.nyt.com/assets/homepage/20140908-095808/images/sprite/sprite-no-repeat.png
 Timing
 Connect: 0
 Waiting: 94
 Receive: 212
 Send: 0
-Goodput: 197.8066037735849
 Active Percentage : 5.780235737531056
 Idle Percentage : 94.21976426246894
 Average goodput : 199.78070175438597
-Maximum goodput : 225.9375
+Maximum goodput : 197.8066037735849
 
 
 Domain Name: typeface.nytimes.com
@@ -371,25 +360,22 @@ Connect: 0
 Waiting: 176
 Receive: 28
 Send: 0
-Goodput: 787.75
 2 -> http://typeface.nytimes.com/k/zam5nzz-d.css?3bb2a6e53c9684ffdc9a98f01c5b2a6283172bd2d28e6d8521eb4185e6659f40f839011d6f9ba09a1aedcb02428b4708bdab7203bd845c2d227ec97b9a7c05847d7fed063fb32df3dcacb969477c0fd6e0349ffc6eed4a558c4637a7f13bd6419fddae9376984af20caa2c2964800b0dbc2c80d7868a5f7588cbd174387af10ea724c0e29d9a45b70f6223bbc9ca3bc879fbea75f3abf70aa56b9bd7bda8191e12e9c57c5a0da1451da6a2e261e29da5736591d509a3754c9b6226acb30bc49ff19fa85c2d1e04193c634e34788dcc351fec4a9511eef8a44e6e9988a8c73d87367a9b12c2a8ffb6fab185b0082561b56921f761d74ef19c39323cb93ff37c5028df41420a44b1e65815
 Timing
 Connect: 0
 Waiting: 47
 Receive: 891
 Send: 0
-Goodput: 553.8911335578002
 3 -> http://typeface.nytimes.com/zam5nzz.js
 Timing
 Connect: 0
 Waiting: 176
 Receive: 28
 Send: 0
-Goodput: 787.75
 Active Percentage : 20.086773068860474
 Idle Percentage : 79.91322693113952
 Average goodput : 567.7201689545934
-Maximum goodput : 787.75
+Maximum goodput : 553.8911335578002
 
 
 Domain Name: int.nyt.com
@@ -403,7 +389,6 @@ Connect: 0
 Waiting: 32
 Receive: 15
 Send: 0
-Goodput: 838.6
 Active Percentage : 0.8232045602029638
 Idle Percentage : 99.17679543979703
 Average goodput : 838.6
@@ -421,7 +406,6 @@ Connect: 0
 Waiting: 149
 Receive: 39
 Send: 0
-Goodput: 692.7179487179487
 2 -> http://static01.nyt.com/images/2014/09/07/realestate/07mort/07mort-thumbStandard.jpg
 Timing
 Connect: 0
@@ -434,46 +418,40 @@ Connect: 0
 Waiting: 72
 Receive: 6
 Send: 0
-Goodput: 957.6666666666666
 4 -> http://static01.nyt.com/images/2014/09/10/arts/WATERS/WATERS-mediumSquare149.jpg
 Timing
 Connect: 0
 Waiting: 80
 Receive: 5
 Send: 0
-Goodput: 1045.2
 5 -> http://static01.nyt.com/images/2014/09/11/arts/11U2/11U2-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 51
 Receive: 5
 Send: 0
-Goodput: 585.4
 6 -> http://static01.nyt.com/images/2014/09/10/arts/10FRINGE/10FRINGE-thumbStandard-v2.jpg
 Timing
 Connect: 0
 Waiting: 37
 Receive: 1
 Send: 0
-Goodput: 2968
 7 -> http://static01.nyt.com/images/2014/09/09/health/well_cola/well_cola-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 25
 Receive: 2
 Send: 0
-Goodput: 1232.5
 8 -> http://static01.nyt.com/images/2014/09/10/nyregion/PARKING1/PARKING1-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 36
 Receive: 2
 Send: 0
-Goodput: 1296.5
 Active Percentage : 8.347607480032902
 Idle Percentage : 91.6523925199671
 Average goodput : 857.8666666666667
-Maximum goodput : 2968
+Maximum goodput : 692.7179487179487
 
 
 New connections:
@@ -485,60 +463,52 @@ Connect: 0
 Waiting: 143
 Receive: 4
 Send: 0
-Goodput: 943.5
 2 -> http://static01.nyt.com/images/video/filmstrip-right-boundry-31x129-shadow.png
 Timing
 Connect: 0
 Waiting: 361
 Receive: 5
 Send: 0
-Goodput: 921.6
 3 -> http://static01.nyt.com/images/2014/09/10/nyregion/11BLOCKS-hp/11BLOCKS-hp-thumbStandard-v3.jpg
 Timing
 Connect: 0
 Waiting: 40
 Receive: 2
 Send: 0
-Goodput: 1608.5
 4 -> http://static01.nyt.com/images/2014/09/09/travel/09-frugal-top/09-frugal-top-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 18
 Receive: 2
 Send: 0
-Goodput: 1449
 5 -> http://static01.nyt.com/images/2014/09/07/sunday-review/0907COVERfinal2/0907COVERfinal2-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 38
 Receive: 2
 Send: 0
-Goodput: 1510.5
 6 -> http://static01.nyt.com/bi/js/tagx/tagx.js
 Timing
 Connect: 0
 Waiting: 42
 Receive: 33
 Send: 0
-Goodput: 657.1818181818181
 7 -> http://static01.nyt.com/js2/build/video/players/extended/1.0/appRequire.js
 Timing
 Connect: 0
 Waiting: 368
 Receive: 3
 Send: 0
-Goodput: 1178.3333333333333
 8 -> http://static01.nyt.com/js2/build/video/2.0/videofactoryrequire.js
 Timing
 Connect: 0
 Waiting: 153
 Receive: 229
 Send: 0
-Goodput: 218.96943231441048
 Active Percentage : 14.03820493094137
 Idle Percentage : 85.96179506905864
 Average goodput : 331.72857142857146
-Maximum goodput : 1608.5
+Maximum goodput : 218.96943231441048
 
 
 New connections:
@@ -550,21 +520,18 @@ Connect: 0
 Waiting: 200
 Receive: 4
 Send: 0
-Goodput: 871
 2 -> http://static01.nyt.com/images/2014/09/10/business/10STATE/10STATE-mediumSquare149.jpg
 Timing
 Connect: 0
 Waiting: 134
 Receive: 13
 Send: 0
-Goodput: 746.6923076923077
 3 -> http://static01.nyt.com/images/2014/09/10/dining/20140910-REST-slide-35DN/20140910-REST-slide-35DN-mediumSquare149-v3.jpg
 Timing
 Connect: 0
 Waiting: 72
 Receive: 19
 Send: 0
-Goodput: 751.1578947368421
 4 -> http://static01.nyt.com/images/2014/09/10/opinion/0910OPEDselman/0910OPEDselman-thumbStandard.jpg
 Timing
 Connect: 0
@@ -583,18 +550,16 @@ Connect: 0
 Waiting: 32
 Receive: 3
 Send: 0
-Goodput: 1097
 7 -> http://static01.nyt.com/images/2014/09/11/business/11ferrari-pic1/11ferrari-pic1-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 37
 Receive: 4
 Send: 0
-Goodput: 740.5
 Active Percentage : 8.168840507709147
 Idle Percentage : 91.83115949229087
 Average goodput : 906.8837209302326
-Maximum goodput : 1097
+Maximum goodput : 751.1578947368421
 
 
 New connections:
@@ -606,46 +571,40 @@ Connect: 0
 Waiting: 206
 Receive: 7
 Send: 0
-Goodput: 590.4285714285714
 2 -> http://static01.nyt.com/images/2014/09/10/dining/20140910-HALIBUT-slide-ZM66/20140910-HALIBUT-slide-ZM66-mediumSquare149-v2.jpg
 Timing
 Connect: 0
 Waiting: 140
 Receive: 11
 Send: 0
-Goodput: 784.7272727272727
 3 -> http://static01.nyt.com/images/2014/09/03/science/03als/03als-mediumSquare149-v3.jpg
 Timing
 Connect: 0
 Waiting: 82
 Receive: 9
 Send: 0
-Goodput: 900.5555555555555
 4 -> http://static01.nyt.com/images/2014/09/10/business/10minecraft/10minecraft-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 59
 Receive: 5
 Send: 0
-Goodput: 753
 5 -> http://static01.nyt.com/images/2014/09/10/sports/SUB-MBARNES-obit/SUB-MBARNES-obit-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 43
 Receive: 2
 Send: 0
-Goodput: 1370.5
 6 -> http://static01.nyt.com/images/2014/09/04/garden/04PETCAM/04PETCAM-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 47
 Receive: 2
 Send: 0
-Goodput: 1691.5
 Active Percentage : 8.060853261700005
 Idle Percentage : 91.9391467383
 Average goodput : 854.4166666666666
-Maximum goodput : 1691.5
+Maximum goodput : 784.7272727272727
 
 
 New connections:
@@ -657,53 +616,46 @@ Connect: 0
 Waiting: 196
 Receive: 2
 Send: 0
-Goodput: 1383.5
 2 -> http://static01.nyt.com/images/2014/09/10/opinion/0910OPEDselman/0910OPEDselman-mediumSquare149.jpg
 Timing
 Connect: 0
 Waiting: 133
 Receive: 3
 Send: 0
-Goodput: 1552.6666666666667
 3 -> http://static01.nyt.com/images/2014/09/10/opinion/0910lettersDIALOGUE/0910lettersDIALOGUE-mediumSquare149.jpg
 Timing
 Connect: 0
 Waiting: 73
 Receive: 11
 Send: 0
-Goodput: 851.3636363636364
 4 -> http://static01.nyt.com/images/2014/07/06/us/detroit-the-path-to-recovery-from-bankruptcy-1404674949169/detroit-the-path-to-recovery-from-bankruptcy-1404674949169-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 74
 Receive: 5
 Send: 0
-Goodput: 857.2
 5 -> http://static01.nyt.com/images/2014/09/10/sports/KONERKO4/KONERKO4-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 44
 Receive: 2
 Send: 0
-Goodput: 1772
 6 -> http://static01.nyt.com/images/2014/09/10/nyregion/SCHOLARSHIP/SCHOLARSHIP-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 41
 Receive: 1
 Send: 0
-Goodput: 2627
 7 -> http://static01.nyt.com/images/2014/09/11/upshot/11up-facebook/11up-facebook-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 43
 Receive: 6
 Send: 0
-Goodput: 873.6666666666666
 Active Percentage : 8.29020313743653
 Idle Percentage : 91.70979686256346
 Average goodput : 1082.9666666666667
-Maximum goodput : 2627
+Maximum goodput : 851.3636363636364
 
 
 New connections:
@@ -715,28 +667,24 @@ Connect: 0
 Waiting: 191
 Receive: 1
 Send: 0
-Goodput: 2374
 2 -> http://static01.nyt.com/images/2014/09/10/us/HILLSONG/HILLSONG-mediumSquare149.jpg
 Timing
 Connect: 0
 Waiting: 124
 Receive: 10
 Send: 0
-Goodput: 840
 3 -> http://static01.nyt.com/images/2014/09/14/t-magazine/14mens-arena-hopper-1/14mens-arena-hopper-1-mediumSquare149.jpg
 Timing
 Connect: 0
 Waiting: 70
 Receive: 10
 Send: 0
-Goodput: 379.3
 4 -> http://static01.nyt.com/images/2014/09/10/world/middleeast/11DIPLO/11DIPLO-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 76
 Receive: 2
 Send: 0
-Goodput: 1601
 5 -> http://static01.nyt.com/images/2014/09/10/us/JP-OBAMA/JP-OBAMA-thumbStandard.jpg
 Timing
 Connect: 0
@@ -749,25 +697,22 @@ Connect: 0
 Waiting: 41
 Receive: 2
 Send: 0
-Goodput: 1249.5
 7 -> http://static01.nyt.com/images/2014/09/10/arts/WATERS/WATERS-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 38
 Receive: 1
 Send: 0
-Goodput: 2430
 8 -> http://static01.nyt.com/images/2014/09/09/t-magazine/09well-mexico-slide-81K0/09well-mexico-slide-81K0-thumbStandard.jpg
 Timing
 Connect: 0
 Waiting: 40
 Receive: 3
 Send: 0
-Goodput: 1226.6666666666667
 Active Percentage : 8.661428552176801
 Idle Percentage : 91.3385714478232
 Average goodput : 1018.3793103448276
-Maximum goodput : 2430
+Maximum goodput : 840
 
 
 Domain Name: i1.nyt.com
@@ -781,7 +726,6 @@ Connect: 0
 Waiting: 196
 Receive: 1
 Send: 0
-Goodput: 2038
 Active Percentage : 2.935524118459872
 Idle Percentage : 97.06447588154012
 Average goodput : 2038
@@ -799,42 +743,36 @@ Connect: 0
 Waiting: 199
 Receive: 5
 Send: 0
-Goodput: 1110.8
 2 -> http://graphics8.nytimes.com/adx/images/ADS/38/08/ad.380822/bar1-inyt-sept-flash.png
 Timing
 Connect: 0
 Waiting: 60
 Receive: 146
 Send: 0
-Goodput: 222.45205479452054
 3 -> http://graphics8.nytimes.com/adx/images/ADS/37/76/ad.377622/Cassa_logo.jpg
 Timing
 Connect: 0
 Waiting: 54
 Receive: 21
 Send: 0
-Goodput: 709
 4 -> http://graphics8.nytimes.com/bi/js/analytics/EventTracker.js
 Timing
 Connect: 0
 Waiting: 72
 Receive: 8
 Send: 0
-Goodput: 826.5
 5 -> http://graphics8.nytimes.com/images/2014/09/05/multimedia/studio-narcisorodriguez/studio-narcisorodriguez-videoSmall.jpg
 Timing
 Connect: 0
 Waiting: 62
 Receive: 329
 Send: 0
-Goodput: 134.29179331306992
 6 -> http://graphics8.nytimes.com/images/video/spinner-dark.gif
 Timing
 Connect: 0
 Waiting: 62
 Receive: 16
 Send: 0
-Goodput: 223
 7 -> http://graphics8.nytimes.com/images/2014/09/08/arts/BOOKDAVIES/BOOKDAVIES-thumbStandard.jpg
 Timing
 Connect: 0
@@ -844,7 +782,7 @@ Send: 0
 Active Percentage : 5.481531498320096
 Idle Percentage : 94.5184685016799
 Average goodput : 208.8
-Maximum goodput : 1110.8
+Maximum goodput : 134.29179331306992
 
 
 New connections:
@@ -856,28 +794,24 @@ Connect: 0
 Waiting: 469
 Receive: 2
 Send: 0
-Goodput: 1711
 2 -> http://graphics8.nytimes.com/marketing/ADX/bar1/bar1_et_inyt.js?v=1&_=1410369373000
 Timing
 Connect: 0
 Waiting: 414
 Receive: 1
 Send: 0
-Goodput: 2034
 3 -> http://graphics8.nytimes.com/adx/images/ADS/37/76/ad.377622/Cassa_Property.png
 Timing
 Connect: 0
 Waiting: 78
 Receive: 129
 Send: 0
-Goodput: 253.57364341085272
 4 -> http://graphics8.nytimes.com/images/2014/09/03/multimedia/tmagazine-redzepi/tmagazine-redzepi-videoSmall.jpg
 Timing
 Connect: 0
 Waiting: 94
 Receive: 47
 Send: 0
-Goodput: 595.4255319148937
 5 -> http://graphics8.nytimes.com/images/video/playbutton_arrow.png
 Timing
 Connect: 0
@@ -893,7 +827,7 @@ Send: 0
 Active Percentage : 7.129378907879551
 Idle Percentage : 92.87062109212046
 Average goodput : 397.0558659217877
-Maximum goodput : 2034
+Maximum goodput : 253.57364341085272
 
 
 New connections:
@@ -905,14 +839,12 @@ Connect: 0
 Waiting: 453
 Receive: 2
 Send: 0
-Goodput: 1449
 2 -> http://graphics8.nytimes.com/adx/images/ADS/38/09/ad.380925/CRS-1639_Crosswords_163x90_free_adv1.png
 Timing
 Connect: 0
 Waiting: 64
 Receive: 1
 Send: 0
-Goodput: 3334
 3 -> http://graphics8.nytimes.com/ads/adx/realestate/hpcss/USRE_HP_Module.css
 Timing
 Connect: 0
@@ -931,7 +863,6 @@ Connect: 0
 Waiting: 141
 Receive: 46
 Send: 0
-Goodput: 489
 6 -> http://graphics8.nytimes.com/images/2014/09/08/us/nytnow-apple/nytnow-apple-thumbStandard-v2.jpg
 Timing
 Connect: 0
@@ -941,7 +872,7 @@ Send: 0
 Active Percentage : 8.442499328656512
 Idle Percentage : 91.55750067134349
 Average goodput : 680.0816326530612
-Maximum goodput : 3334
+Maximum goodput : 489
 
 
 New connections:
@@ -953,35 +884,30 @@ Connect: 0
 Waiting: 554
 Receive: 2
 Send: 0
-Goodput: 1484
 2 -> http://graphics8.nytimes.com/adx/images/ADS/38/23/ad.382358/CRS-2971_SeptSaleBanner_extended_163x90_retina_ER1.png
 Timing
 Connect: 0
 Waiting: 79
 Receive: 30
 Send: 0
-Goodput: 463.3333333333333
 3 -> http://graphics8.nytimes.com/adx/images/ADS/38/24/ad.382420/CRS-2971_SeptSaleBanner_extended_300x79_retina_ER1.png
 Timing
 Connect: 110
 Waiting: 70
 Receive: 23
 Send: 0
-Goodput: 718.0869565217391
 4 -> http://graphics8.nytimes.com/bi/js/analytics/wtHelperFunctions.js
 Timing
 Connect: 0
 Waiting: 143
 Receive: 2
 Send: 0
-Goodput: 1643
 5 -> http://graphics8.nytimes.com/images/2014/09/06/multimedia/retro-swat/retro-swat-videoSmall.jpg
 Timing
 Connect: 0
 Waiting: 187
 Receive: 172
 Send: 0
-Goodput: 251.57558139534885
 6 -> http://graphics8.nytimes.com/images/2014/09/09/business/Data1/Data1-thumbStandard.jpg
 Timing
 Connect: 0
@@ -991,7 +917,7 @@ Send: 0
 Active Percentage : 7.032754228868132
 Idle Percentage : 92.96724577113187
 Average goodput : 365.5240174672489
-Maximum goodput : 1643
+Maximum goodput : 251.57558139534885
 
 
 New connections:
@@ -1009,18 +935,16 @@ Connect: 0
 Waiting: 159
 Receive: 67
 Send: 0
-Goodput: 238.28358208955223
 3 -> http://graphics8.nytimes.com/images/video/video-default-thumb-96x54-000000.png
 Timing
 Connect: 0
 Waiting: 219
 Receive: 15
 Send: 0
-Goodput: 579.9333333333333
 Active Percentage : 3.5342401331102535
 Idle Percentage : 96.46575986688974
 Average goodput : 305.5731707317073
-Maximum goodput : 579.9333333333333
+Maximum goodput : 238.28358208955223
 
 
 Domain Name: p.typekit.net
@@ -1070,7 +994,6 @@ Connect: 142
 Waiting: 255
 Receive: 8
 Send: 0
-Goodput: 803.125
 Active Percentage : 3.0377221565332455
 Idle Percentage : 96.96227784346677
 Average goodput : 803.125
@@ -1088,7 +1011,6 @@ Connect: 0
 Waiting: 428
 Receive: 1237
 Send: 0
-Goodput: 31.71301535974131
 Active Percentage : 19.21874697001737
 Idle Percentage : 80.78125302998262
 Average goodput : 31.71301535974131
@@ -1106,7 +1028,6 @@ Connect: 0
 Waiting: 628
 Receive: 1112
 Send: 0
-Goodput: 97.50179856115108
 Active Percentage : 18.487798000194015
 Idle Percentage : 81.51220199980598
 Average goodput : 97.50179856115108
@@ -1146,7 +1067,6 @@ Connect: 0
 Waiting: 185
 Receive: 200
 Send: 0
-Goodput: 14.94
 Active Percentage : 3.947703692538482
 Idle Percentage : 96.05229630746152
 Average goodput : 14.94
@@ -1162,7 +1082,6 @@ Connect: 18
 Waiting: 1302
 Receive: 154
 Send: 0
-Goodput: 19.396103896103895
 Active Percentage : 14.774563599879247
 Idle Percentage : 85.22543640012074
 Average goodput : 19.396103896103895
@@ -1178,7 +1097,6 @@ Connect: 44
 Waiting: 175
 Receive: 228
 Send: 0
-Goodput: 19.416666666666668
 Active Percentage : 3.9973234794846046
 Idle Percentage : 96.0026765205154
 Average goodput : 19.416666666666668
@@ -1212,25 +1130,22 @@ Connect: 26
 Waiting: 446
 Receive: 10
 Send: 0
-Goodput: 789.5
 2 -> http://cdn.krxd.net/controltag?confid=HrUwtkcl
 Timing
 Connect: 26
 Waiting: 446
 Receive: 10
 Send: 0
-Goodput: 789.5
 3 -> http://cdn.krxd.net/ctjs/controltag.js.d763e2f4c6fecc1729f3f818a241f472
 Timing
 Connect: 0
 Waiting: 292
 Receive: 479
 Send: 0
-Goodput: 65.52818371607516
 Active Percentage : 14.735420404696105
 Idle Percentage : 85.26457959530389
 Average goodput : 94.54509018036072
-Maximum goodput : 789.5
+Maximum goodput : 65.52818371607516
 
 
 New connections:
@@ -1242,7 +1157,6 @@ Connect: 0
 Waiting: 292
 Receive: 479
 Send: 0
-Goodput: 65.52818371607516
 Active Percentage : 7.05044948673002
 Idle Percentage : 92.94955051326998
 Average goodput : 65.52818371607516
@@ -1266,7 +1180,6 @@ Connect: 0
 Waiting: 77
 Receive: 208
 Send: 0
-Goodput: 315.9375
 3 -> http://ds.serving-sys.com/BurstingRes//Site-87522/Type-2/8a27fdc8-4256-4943-9390-8584147c19e7.swf
 Timing
 Connect: 0
@@ -1279,7 +1192,6 @@ Connect: 0
 Waiting: 47
 Receive: 188
 Send: 0
-Goodput: 652.2978723404256
 5 -> http://ds.serving-sys.com/BurstingRes//Site-87522/Type-2/8a27fdc8-4256-4943-9390-8584147c19e7.swf
 Timing
 Connect: 0
@@ -1307,7 +1219,6 @@ Connect: 0
 Waiting: 124
 Receive: 130
 Send: 0
-Goodput: 224.75384615384615
 2 -> http://ds.serving-sys.com/BurstingRes//Site-87522/Type-2/621ab0c0-7113-4d67-ab89-a79461c0312a.swf
 Timing
 Connect: 0
@@ -1320,25 +1231,22 @@ Connect: 0
 Waiting: 50
 Receive: 5
 Send: 0
-Goodput: 1254.8
 4 -> http://ds.serving-sys.com/BurstingCachedScripts//Ad_2_29_3_0/ebExpBanner_api.js
 Timing
 Connect: 0
 Waiting: 39
 Receive: 159
 Send: 0
-Goodput: 445.8679245283019
 5 -> http://ds.serving-sys.com/BurstingRes//Site-87522/Type-2/36dd1a82-b1c0-46b0-85a8-6d7128609b5a.swf
 Timing
 Connect: 0
 Waiting: 34
 Receive: 37
 Send: 0
-Goodput: 670.972972972973
 Active Percentage : 5.456486138168007
 Idle Percentage : 94.543513861832
 Average goodput : 405.57099697885195
-Maximum goodput : 1254.8
+Maximum goodput : 445.8679245283019
 
 
 New connections:
@@ -1350,14 +1258,12 @@ Connect: 0
 Waiting: 124
 Receive: 130
 Send: 0
-Goodput: 224.75384615384615
 2 -> http://ds.serving-sys.com/BurstingRes//Site-87522/Type-12/f4437636-df7d-4703-ba4f-fe5c15805ec1.flv
 Timing
 Connect: 0
 Waiting: 62
 Receive: 4047
 Send: 0
-Goodput: 540.1833456881641
 Active Percentage : 31.571047084927926
 Idle Percentage : 68.42895291507207
 Average goodput : 530.3662915968398
@@ -1375,7 +1281,6 @@ Connect: 0
 Waiting: 121
 Receive: 90
 Send: 0
-Goodput: 201.2888888888889
 2 -> http://js.nyt.com/css/0.1/screen/common/modules/video/poster.css
 Timing
 Connect: 0
@@ -1412,7 +1317,6 @@ Connect: 68
 Waiting: 1650
 Receive: 15
 Send: 0
-Goodput: 248.73333333333332
 Active Percentage : 13.810679064039084
 Idle Percentage : 86.18932093596092
 Average goodput : 248.73333333333332
@@ -1430,7 +1334,6 @@ Connect: 0
 Waiting: 110
 Receive: 1481
 Send: 0
-Goodput: 5.24172856178258
 Active Percentage : 15.208570100945328
 Idle Percentage : 84.79142989905468
 Average goodput : 5.24172856178258
@@ -1499,7 +1402,6 @@ Connect: 379
 Waiting: 386
 Receive: 1
 Send: 0
-Goodput: 2667
 Active Percentage : 3.5624904551491197
 Idle Percentage : 96.43750954485088
 Average goodput : 2667
@@ -1517,7 +1419,6 @@ Connect: 0
 Waiting: 120
 Receive: 13
 Send: 0
-Goodput: 776.0769230769231
 Active Percentage : 1.215032639613645
 Idle Percentage : 98.78496736038636
 Average goodput : 776.0769230769231
@@ -1535,7 +1436,6 @@ Connect: 0
 Waiting: 280
 Receive: 4431
 Send: 0
-Goodput: 19.799142405777477
 Active Percentage : 42.293976443574834
 Idle Percentage : 57.70602355642516
 Average goodput : 19.799142405777477
@@ -1553,7 +1453,6 @@ Connect: 163
 Waiting: 170
 Receive: 625
 Send: 0
-Goodput: 73.7888
 Active Percentage : 6.76182438955185
 Idle Percentage : 93.23817561044815
 Average goodput : 73.7888
@@ -1569,7 +1468,6 @@ Connect: 173
 Waiting: 211
 Receive: 203
 Send: 0
-Goodput: 99.06403940886699
 Active Percentage : 3.5195626900850776
 Idle Percentage : 96.48043730991492
 Average goodput : 99.06403940886699
@@ -1777,7 +1675,6 @@ Connect: 391
 Waiting: 1594
 Receive: 15
 Send: 0
-Goodput: 68
 Active Percentage : 10.346048642118088
 Idle Percentage : 89.65395135788191
 Average goodput : 68
@@ -1797,5 +1694,10 @@ Receive: 0
 Send: 0
 Active Percentage : 2.5941049621907473
 Idle Percentage : 97.40589503780926
+
+
+
+Average goodput(Network) : 145.3080803476464
+Maximum goodput(Network) : 2667
 
 
