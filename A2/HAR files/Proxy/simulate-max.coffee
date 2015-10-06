@@ -44,7 +44,7 @@ class TreeNode
     connections[@connection].other+= @receive
 
     endTime = connections[@connection].other+connections[@connection].connect
-    console.log(connections[@connection],endTime);
+    # console.log(connections[@connection],endTime);
     if @children.length
       async.map(@children, (child,cb)=>
         child.process(endTime,cb)
@@ -107,27 +107,34 @@ for dom,cons of data
 goodputs = fs.readFileSync('goodput.csv','utf8').split('\n');
 max_gp=0
 for gp in goodputs
-  [gp,dom]=dp.split(', ');
+  gp=gp.trim()
+  if(!gp)
+    continue;
+  [gp,dom]=gp.split(', ');
   gp=parseFloat(gp)
+  if(!doms[dom])
+    console.log("#{dom} not found in tcp con json");
+    continue;
   if(gp> doms[dom].goodput)
     doms[dom].goodput=gp;
   if(gp>max_gp)
     max_gp=gp;
+
 for dom,props of doms
   if(props.goodput==0)
-    props.goodput=max_gp
-
+    props.goodput= max_gp
+console.log doms
+for id,obj of objTreeIndex
+  if(obj.connection==null)
+    # console.log("unknown "+obj.url);
+    obj.parent.children = _.filter(obj.parent.children, (c)-> (c!=obj))
+    delete objTreeIndex[id]
 for id,obj of objTreeIndex
   obj.receive = obj.size / doms[obj.domain].goodput
 # console.log ("pcap:"+Object.keys(urls).length)
 # console.log("tree:"+Object.keys(objTreeIndex).length);
 # console.log("Checking:");
-console.log("Checking:")
-for id,obj of objTreeIndex
-  if(obj.connection==null)
-    # console.log("unknown "+obj.url);
-    obj.parent.children = _.filter(obj.parent.children, (c)-> (c!=obj))
-console.log("startgin:");
+console.log("startsim:");
 objTree.process(0,(err,time)->
   console.log("final",time)
 );
