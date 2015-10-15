@@ -61,6 +61,7 @@ requestObject = (url,opt,cb)->
       if(opt.referrer)
         client.write("Referer: #{opt.referrer}\r\n")
       client.write("Accept-Encoding: gzip\r\n")
+      client.write("Connection: keep-alive\r\n")
       client.write("\r\n")
       if(!callbackDone)
         callbackDone=true
@@ -169,7 +170,7 @@ receiveObject = (filename,url,client, body, cb)->
 
 MAX_CONNECTIONS = 20
 MAX_CONNECTIONS_PER_SERVER = 5
-MAX_OBJECTS_PER_CONNECTION = 1
+MAX_OBJECTS_PER_CONNECTION = 2
 
 class Connection
   constructor: (url,cb)->
@@ -274,7 +275,7 @@ class TreeNode
       connections[url.hostname]=[]
     pool = connections[url.hostname]
     best = null
-    # minLen = 100000
+    minLen = 100000
     for con in pool
       len = con.numActive #+ con.queued.length
       if minLen > len
