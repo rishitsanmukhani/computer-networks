@@ -1,0 +1,140 @@
+
+Domain Name: www.nytimes.com
+Time spent for DNS Query 57743: 0.044298000
+Time spent for DNS Query 31993: 0.010220000
+
+Domain Name: pnytimes.chartbeat.net
+Time spent for DNS Query 13025: 0.010305000
+
+Domain Name: a1.nyt.com
+DNS Query not launched
+
+Domain Name: typeface.nytimes.com
+DNS Query not launched
+
+Domain Name: int.nyt.com
+DNS Query not launched
+
+Domain Name: static01.nyt.com
+Time spent for DNS Query 55955: 0.030988000
+
+Domain Name: i1.nyt.com
+DNS Query not launched
+
+Domain Name: graphics8.nytimes.com
+Time spent for DNS Query 33106: 0.018372000
+
+Domain Name: p.typekit.net
+DNS Query not launched
+
+Domain Name: markets.on.nytimes.com
+DNS Query not launched
+
+Domain Name: js-agent.newrelic.com
+Time spent for DNS Query 31319: 0.074438000
+
+Domain Name: tagx.nytimes.com
+DNS Query not launched
+
+Domain Name: s1.nyt.com
+DNS Query not launched
+
+Domain Name: beacon-6.newrelic.com
+DNS Query not launched
+
+Domain Name: bs.serving-sys.com
+Time spent for DNS Query 12627: 0.015966000
+
+Domain Name: js.moatads.com
+DNS Query not launched
+
+Domain Name: cdn.krxd.net
+Time spent for DNS Query 22385: 0.131073000
+
+Domain Name: ds.serving-sys.com
+DNS Query not launched
+
+Domain Name: js.nyt.com
+DNS Query not launched
+
+Domain Name: js.revsci.net
+Time spent for DNS Query 29143: 0.227765000
+
+Domain Name: static.chartbeat.com
+DNS Query not launched
+
+Domain Name: b.scorecardresearch.com
+Time spent for DNS Query 44259: 0.123892000
+
+Domain Name: secure-us.imrworldwide.com
+Time spent for DNS Query 47421: 0.125312000
+
+Domain Name: up.nytimes.com
+DNS Query not launched
+
+Domain Name: st.dynamicyield.com
+Time spent for DNS Query 37405: 0.117743000
+
+Domain Name: pagead2.googlesyndication.com
+DNS Query not launched
+
+Domain Name: api.brightcove.com
+DNS Query not launched
+
+Domain Name: cdn.dynamicyield.com
+Time spent for DNS Query 6642: 0.107254000
+
+Domain Name: beacon.krxd.net
+DNS Query not launched
+
+Domain Name: apiservices.krxd.net
+DNS Query not launched
+
+Domain Name: api.bizographics.com
+DNS Query not launched
+
+Domain Name: pix04.revsci.net
+DNS Query not launched
+
+Domain Name: et.nytimes.com
+DNS Query not launched
+
+Domain Name: wt.o.nytimes.com
+DNS Query not launched
+
+Domain Name: krxd.nexac.com
+Time spent for DNS Query 36983: 0.049119000
+
+Domain Name: s.ixiaa.com
+DNS Query not launched
+
+Domain Name: adadvisor.net
+DNS Query not launched
+
+Domain Name: loadm.exelator.com
+DNS Query not launched
+
+Domain Name: p.acxiom-online.com
+DNS Query not launched
+
+Domain Name: p.rfihub.com
+Time spent for DNS Query 19429: 0.104312000
+
+Domain Name: ib.adnxs.com
+DNS Query not launched
+
+Domain Name: i.w55c.net
+DNS Query not launched
+
+Domain Name: ads.dynamicyield.com
+DNS Query not launched
+
+Domain Name: px.dynamicyield.com
+Time spent for DNS Query 59589: 0.047517000
+Time spent for DNS Query 48762: 0.035845000
+
+Domain Name: cm.g.doubleclick.net
+DNS Query not launched
+
+Domain Name: load.s3.amazonaws.com
+DNS Query not launched

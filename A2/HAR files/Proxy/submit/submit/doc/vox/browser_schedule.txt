@@ -1,0 +1,88 @@
+Domain:www.vox.com
+MaxTCP among same domain: 7
+MaxTCP across domains: 33
+
+Domain:ea-cdn.voxmedia.com
+MaxTCP among same domain: 3
+MaxTCP across domains: 19
+
+Domain:ajax.googleapis.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 14
+
+Domain:cdnjs.cloudflare.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 14
+
+Domain:cdn3.vox-cdn.com
+MaxTCP among same domain: 6
+MaxTCP across domains: 31
+
+Domain:cdn2.vox-cdn.com
+MaxTCP among same domain: 6
+MaxTCP across domains: 34
+
+Domain:cdn0.vox-cdn.com
+MaxTCP among same domain: 8
+MaxTCP across domains: 26
+
+Domain:cdn.jsdelivr.net
+MaxTCP among same domain: 1
+MaxTCP across domains: 12
+
+Domain:edge.quantserve.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 14
+
+Domain:www.youtube.com
+MaxTCP among same domain: 0
+MaxTCP across domains: 0
+
+Domain:www.google-analytics.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 26
+
+Domain:b.scorecardresearch.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 21
+
+Domain:pixel.quantserve.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 21
+
+Domain:s.ytimg.com
+MaxTCP among same domain: 0
+MaxTCP across domains: 0
+
+Domain:fonts.gstatic.com
+MaxTCP among same domain: 0
+MaxTCP across domains: 0
+
+Domain:cdn1.vox-cdn.com
+MaxTCP among same domain: 6
+MaxTCP across domains: 29
+
+Domain:stats.g.doubleclick.net
+MaxTCP among same domain: 0
+MaxTCP across domains: 0
+
+Domain:www.google.com
+MaxTCP among same domain: 0
+MaxTCP across domains: 0
+
+Domain:static.doubleclick.net
+MaxTCP among same domain: 0
+MaxTCP across domains: 0
+
+Domain:i.ytimg.com
+MaxTCP among same domain: 0
+MaxTCP across domains: 0
+
+Domain:static.chartbeat.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 1
+
+Domain:ping.chartbeat.net
+MaxTCP among same domain: 1
+MaxTCP across domains: 1
+
