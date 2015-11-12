@@ -1,0 +1,92 @@
+
+Maximum number of TCP connections opened for www.nytimes.com is 3
+
+Maximum number of TCP connections opened for pnytimes.chartbeat.net is 3
+
+Maximum number of TCP connections opened for a1.nyt.com is 3
+
+Maximum number of TCP connections opened for typeface.nytimes.com is 2
+
+Maximum number of TCP connections opened for int.nyt.com is 1
+
+Maximum number of TCP connections opened for static01.nyt.com is 30
+
+Maximum number of TCP connections opened for i1.nyt.com is 1
+
+Maximum number of TCP connections opened for graphics8.nytimes.com is 17
+
+Maximum number of TCP connections opened for p.typekit.net is 1
+
+Maximum number of TCP connections opened for markets.on.nytimes.com is 1
+
+Maximum number of TCP connections opened for js-agent.newrelic.com is 1
+
+Maximum number of TCP connections opened for tagx.nytimes.com is 1
+
+Maximum number of TCP connections opened for s1.nyt.com is 1
+
+Maximum number of TCP connections opened for beacon-6.newrelic.com is 1
+
+Maximum number of TCP connections opened for bs.serving-sys.com is 1
+
+Maximum number of TCP connections opened for js.moatads.com is 1
+
+Maximum number of TCP connections opened for cdn.krxd.net is 2
+
+Maximum number of TCP connections opened for ds.serving-sys.com is 8
+
+Maximum number of TCP connections opened for js.nyt.com is 1
+
+Maximum number of TCP connections opened for js.revsci.net is 1
+
+Maximum number of TCP connections opened for static.chartbeat.com is 1
+
+Maximum number of TCP connections opened for b.scorecardresearch.com is 2
+
+Maximum number of TCP connections opened for secure-us.imrworldwide.com is 1
+
+Maximum number of TCP connections opened for up.nytimes.com is 1
+
+Maximum number of TCP connections opened for st.dynamicyield.com is 1
+
+Maximum number of TCP connections opened for pagead2.googlesyndication.com is 1
+
+Maximum number of TCP connections opened for api.brightcove.com is 1
+
+Maximum number of TCP connections opened for cdn.dynamicyield.com is 1
+
+Maximum number of TCP connections opened for beacon.krxd.net is 6
+
+Maximum number of TCP connections opened for apiservices.krxd.net is 1
+
+Maximum number of TCP connections opened for api.bizographics.com is 1
+
+Maximum number of TCP connections opened for pix04.revsci.net is 1
+
+Maximum number of TCP connections opened for et.nytimes.com is 2
+
+Maximum number of TCP connections opened for wt.o.nytimes.com is 1
+
+Maximum number of TCP connections opened for krxd.nexac.com is 1
+
+Maximum number of TCP connections opened for s.ixiaa.com is 1
+
+Maximum number of TCP connections opened for adadvisor.net is 1
+
+Maximum number of TCP connections opened for loadm.exelator.com is 1
+
+Maximum number of TCP connections opened for p.acxiom-online.com is 1
+
+Maximum number of TCP connections opened for p.rfihub.com is 1
+
+Maximum number of TCP connections opened for ib.adnxs.com is 1
+
+Maximum number of TCP connections opened for i.w55c.net is 1
+
+Maximum number of TCP connections opened for ads.dynamicyield.com is 1
+
+Maximum number of TCP connections opened for px.dynamicyield.com is 1
+
+Maximum number of TCP connections opened for cm.g.doubleclick.net is 1
+
+Maximum number of TCP connections opened for load.s3.amazonaws.com is 1

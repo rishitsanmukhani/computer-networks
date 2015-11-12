@@ -1,0 +1,8 @@
+Objects with Status==200 OK but null body:
+34 - cdn1.vox-cdn.com
+
+Different http response:
+200 - 76
+204 - 3
+301 - 1
+302 - 2
