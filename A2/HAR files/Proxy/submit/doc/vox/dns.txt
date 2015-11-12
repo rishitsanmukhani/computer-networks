@@ -1,0 +1,90 @@
+
+Domain Name: www.vox.com
+Time spent for DNS Query 0x00009999: 0.104218000
+Time spent for DNS Query 0x0000c63e: 0.100801000
+
+Domain Name: ea-cdn.voxmedia.com
+Time spent for DNS Query 0x00004720: 0.115738000
+Time spent for DNS Query 0x0000cc67: 0.114776000
+
+Domain Name: ajax.googleapis.com
+Time spent for DNS Query 0x00001a56: 0.023419000
+Time spent for DNS Query 0x00004d42: 0.026881000
+Time spent for DNS Query 0x0000233f: 0.052167000
+
+Domain Name: cdnjs.cloudflare.com
+Time spent for DNS Query 0x0000d039: 0.035098000
+Time spent for DNS Query 0x0000daa7: 0.038784000
+Time spent for DNS Query 0x00008412: 0.484984000
+
+Domain Name: ox-d.sbnation.com
+Time spent for DNS Query 0x00001852: 0.223946000
+Time spent for DNS Query 0x00002cf9: 0.216906000
+
+Domain Name: cdn3.vox-cdn.com
+Time spent for DNS Query 0x00006025: 0.090337000
+Time spent for DNS Query 0x0000ba65: 0.087073000
+
+Domain Name: cdn2.vox-cdn.com
+Time spent for DNS Query 0x0000f0fa: 0.065261000
+Time spent for DNS Query 0x00005cc6: 0.064832000
+
+Domain Name: cdn0.vox-cdn.com
+Time spent for DNS Query 0x0000de6c: 0.083921000
+Time spent for DNS Query 0x0000219c: 0.829157000
+Time spent for DNS Query 0x00006c49: 0.770213000
+Time spent for DNS Query 0x00006410: 0.030286000
+
+Domain Name: cdn.jsdelivr.net
+Time spent for DNS Query 0x0000be93: 0.364297000
+Time spent for DNS Query 0x0000ca15: 0.360946000
+
+Domain Name: edge.quantserve.com
+Time spent for DNS Query 0x0000a553: 0.048877000
+Time spent for DNS Query 0x000025a5: 0.029204000
+
+Domain Name: www.youtube.com
+Time spent for DNS Query 0x0000d417: 0.383823000
+
+Domain Name: www.google-analytics.com
+Time spent for DNS Query 0x00005f83: 0.844260000
+Time spent for DNS Query 0x0000b362: 0.847173000
+
+Domain Name: b.scorecardresearch.com
+Time spent for DNS Query 0x0000b641: 0.842552000
+Time spent for DNS Query 0x00003b7a: 1.768537000
+
+Domain Name: pixel.quantserve.com
+Time spent for DNS Query 0x000095f2: 1.820135000
+Time spent for DNS Query 0x0000bbde: 1.823854000
+
+Domain Name: s.ytimg.com
+Time spent for DNS Query 0x00008c7f: 0.405001000
+
+Domain Name: cdn1.vox-cdn.com
+Time spent for DNS Query 0x00009300: 0.679750000
+Time spent for DNS Query 0x00000734: 0.514622000
+Time spent for DNS Query 0x0000fa72: 0.045962000
+
+Domain Name: fonts.gstatic.com
+Time spent for DNS Query 0x0000d6ee: 0.675236000
+
+Domain Name: stats.g.doubleclick.net
+Time spent for DNS Query 0x0000141e: 0.818463000
+Time spent for DNS Query 0x0000ed5c: 0.816773000
+
+Domain Name: www.google.com
+Time spent for DNS Query 0x00009790: 0.651209000
+
+Domain Name: static.doubleclick.net
+Time spent for DNS Query 0x00007d29: 0.652531000
+Time spent for DNS Query 0x0000e85a: 0.665624000
+
+Domain Name: i.ytimg.com
+Time spent for DNS Query 0x0000bd54: 0.614180000
+
+Domain Name: static.chartbeat.com
+Time spent for DNS Query 0x0000d5f5: 0.036247000
+
+Domain Name: ping.chartbeat.net
+Time spent for DNS Query 0x0000dc52: 0.094395000

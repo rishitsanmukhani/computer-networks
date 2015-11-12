@@ -1,0 +1,148 @@
+Domain:www.nytimes.com
+MaxTCP among same domain: 12
+MaxTCP across domains: 35
+
+Domain:pnytimes.chartbeat.net
+MaxTCP among same domain: 1
+MaxTCP across domains: 3
+
+Domain:a1.nyt.com
+MaxTCP among same domain: 4
+MaxTCP across domains: 20
+
+Domain:typeface.nytimes.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 20
+
+Domain:int.nyt.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 7
+
+Domain:static01.nyt.com
+MaxTCP among same domain: 6
+MaxTCP across domains: 38
+
+Domain:i1.nyt.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 19
+
+Domain:graphics8.nytimes.com
+MaxTCP among same domain: 5
+MaxTCP across domains: 27
+
+Domain:p.typekit.net
+MaxTCP among same domain: 1
+MaxTCP across domains: 18
+
+Domain:markets.on.nytimes.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 19
+
+Domain:js-agent.newrelic.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 10
+
+Domain:tagx.nytimes.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 26
+
+Domain:s1.nyt.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 31
+
+Domain:beacon-6.newrelic.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 25
+
+Domain:bs.serving-sys.com
+MaxTCP among same domain: 3
+MaxTCP across domains: 33
+
+Domain:js.moatads.com
+MaxTCP among same domain: 0
+MaxTCP across domains: 0
+
+Domain:cdn.krxd.net
+MaxTCP among same domain: 2
+MaxTCP across domains: 35
+
+Domain:ds.serving-sys.com
+MaxTCP among same domain: 3
+MaxTCP across domains: 35
+
+Domain:js.nyt.com
+MaxTCP among same domain: 2
+MaxTCP across domains: 29
+
+Domain:js.revsci.net
+MaxTCP among same domain: 1
+MaxTCP across domains: 30
+
+Domain:static.chartbeat.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 34
+
+Domain:b.scorecardresearch.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 32
+
+Domain:secure-us.imrworldwide.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 31
+
+Domain:up.nytimes.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 33
+
+Domain:st.dynamicyield.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 32
+
+Domain:pagead2.googlesyndication.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 30
+
+Domain:api.brightcove.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 33
+
+Domain:cdn.dynamicyield.com
+MaxTCP among same domain: 2
+MaxTCP across domains: 29
+
+Domain:beacon.krxd.net
+MaxTCP among same domain: 1
+MaxTCP across domains: 20
+
+Domain:pix04.revsci.net
+MaxTCP among same domain: 1
+MaxTCP across domains: 20
+
+Domain:et.nytimes.com
+MaxTCP among same domain: 3
+MaxTCP across domains: 21
+
+Domain:wt.o.nytimes.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 20
+
+Domain:p.acxiom-online.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 20
+
+Domain:ib.adnxs.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 20
+
+Domain:apiservices.krxd.net
+MaxTCP among same domain: 2
+MaxTCP across domains: 15
+
+Domain:ads.dynamicyield.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 20
+
+Domain:load.s3.amazonaws.com
+MaxTCP among same domain: 1
+MaxTCP across domains: 16
+
