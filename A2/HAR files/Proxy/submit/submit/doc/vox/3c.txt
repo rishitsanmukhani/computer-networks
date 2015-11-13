@@ -1,0 +1,870 @@
+Domain Name: www.vox.com
+
+New connections:
+PORT = 19888
+Active Time = 9.645382000
+1 -> http://www.vox.com/a/maps-explain-the-middle-east
+Timing
+Connect: 0
+Waiting: 327
+Receive: 503
+Send: 0
+2 -> http://www.vox.com/fonts/vox/baltoweb-bold.woff
+Timing
+Connect: 0
+Waiting: 1750
+Receive: 23927
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 4.0704461727384365
+Maximum goodput : 3.0303004973460945
+
+
+New connections:
+PORT = 19916
+Active Time = 16.103941000
+1 -> http://www.vox.com/fonts/vox/alright_sans_regular.woff
+Timing
+Connect: 0
+Waiting: 11081
+Receive: 23471
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 4.668995782028887
+Maximum goodput : 4.668995782028887
+
+
+New connections:
+PORT = 19917
+Active Time = 10.582255000
+1 -> http://www.vox.com/fonts/vox/harriet_text_regular_italic.woff
+Timing
+Connect: 1741
+Waiting: 2054
+Receive: 7747
+Send: 0
+Active Percentage : 92.61731077166446
+Idle Percentage : 7.382689228335537
+Average goodput : 9.398605911965923
+Maximum goodput : 9.398605911965923
+
+
+New connections:
+PORT = 19918
+Active Time = 10.675060000
+1 -> http://www.vox.com/fonts/vox/harriet_text_regular.woff
+Timing
+Connect: 352
+Waiting: 2165
+Receive: 16054
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 4.010153232839168
+Maximum goodput : 4.010153232839168
+
+
+New connections:
+PORT = 19920
+Active Time = 10.679611000
+1 -> http://www.vox.com/fonts/vox/voxicon.woff
+Timing
+Connect: 0
+Waiting: 2230
+Receive: 12707
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 0.43818367828755805
+Maximum goodput : 0.43818367828755805
+
+
+New connections:
+PORT = 19922
+Active Time = 10.964049000
+1 -> http://www.vox.com/fonts/vox/alright_sans_bold.woff
+Timing
+Connect: 0
+Waiting: 2190
+Receive: 36146
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 3.1045758866817903
+Maximum goodput : 3.1045758866817903
+
+
+New connections:
+PORT = 19923
+Active Time = 10.963686000
+1 -> http://www.vox.com/fonts/vox/baltoweb-medium.woff
+Timing
+Connect: 0
+Waiting: 2159
+Receive: 40694
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 1.5907259055389
+Maximum goodput : 1.5907259055389
+
+
+Domain Name: ea-cdn.voxmedia.com
+
+New connections:
+PORT = 19893
+Active Time = 4.395452000
+1 -> http://ea-cdn.voxmedia.com/production/vox-40-maps/stylesheets/styles-dde012bd.css
+Timing
+Connect: 343
+Waiting: 235
+Receive: 248
+Send: 0
+Active Percentage : 10.988630975835934
+Idle Percentage : 89.01136902416407
+Average goodput : 69.1491935483871
+Maximum goodput : 69.1491935483871
+
+
+New connections:
+PORT = 19894
+Active Time = 4.396055000
+1 -> http://ea-cdn.voxmedia.com/production/vox-40-maps/javascripts/top-91c80ccb.js
+Timing
+Connect: 344
+Waiting: 291
+Receive: 28
+Send: 0
+Active Percentage : 7.256506117416639
+Idle Percentage : 92.74349388258337
+Average goodput : 192.92857142857142
+Maximum goodput : 192.92857142857142
+
+
+New connections:
+PORT = 19895
+Active Time = 4.396432000
+1 -> http://ea-cdn.voxmedia.com/production/vox-40-maps/javascripts/bottom-5cff2261.js
+Timing
+Connect: 39
+Waiting: 376
+Receive: 0
+Send: 0
+Active Percentage : 8.55238975605673
+Idle Percentage : 91.44761024394327
+
+
+New connections:
+PORT = 19919
+Active Time = 10.370841000
+1 -> http://ea-cdn.voxmedia.com/production/vox-40-maps/stylesheets/fonts/fontello-da841874.woff
+Timing
+Connect: 49
+Waiting: 2024
+Receive: 21
+Send: 0
+Active Percentage : 19.71874797810515
+Idle Percentage : 80.28125202189484
+Average goodput : 206.33333333333334
+Maximum goodput : 206.33333333333334
+
+
+Domain Name: ajax.googleapis.com
+
+New connections:
+PORT = 19890
+Active Time = 4.915524000
+1 -> http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js
+Timing
+Connect: 0
+Waiting: 93
+Receive: 348
+Send: 0
+Active Percentage : 8.97157658064532
+Idle Percentage : 91.02842341935468
+Average goodput : 95.60344827586206
+Maximum goodput : 95.60344827586206
+
+
+New connections:
+PORT = 20008
+Active Time = 210.000571000
+Active Percentage : 0
+Idle Percentage : 100
+
+
+Domain Name: cdnjs.cloudflare.com
+
+New connections:
+PORT = 19892
+Active Time = 6.581846000
+1 -> http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js
+Timing
+Connect: 163
+Waiting: 344
+Receive: 124
+Send: 0
+Active Percentage : 7.110467185042009
+Idle Percentage : 92.88953281495799
+Average goodput : 43.66129032258065
+Maximum goodput : 43.66129032258065
+
+
+Domain Name: cdn3.vox-cdn.com
+
+New connections:
+PORT = 19897
+Active Time = 35.112478000
+1 -> http://cdn3.vox-cdn.com/assets/4395599/Israeli_territory_1949_to_1967_crop.jpg
+Timing
+Connect: 0
+Waiting: 265
+Receive: 3072
+Send: 0
+2 -> http://cdn3.vox-cdn.com/assets/4232215/syria_levant_religion.png
+Timing
+Connect: 0
+Waiting: 1912
+Receive: 141356
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 7.386483230398538
+Maximum goodput : 6.5698378561928745
+
+
+New connections:
+PORT = 19904
+Active Time = 32.702188000
+1 -> http://cdn3.vox-cdn.com/assets/4395631/Durand_line_crop.jpg
+Timing
+Connect: 0
+Waiting: 506
+Receive: 16698
+Send: 0
+2 -> http://cdn3.vox-cdn.com/assets/4418945/123_Israel_Lebanon_2006.gif
+Timing
+Connect: 0
+Waiting: 1735
+Receive: 22367
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 9.617022910533725
+Maximum goodput : 16.16337285902503
+
+
+New connections:
+PORT = 19910
+Active Time = 16.663941000
+1 -> http://cdn3.vox-cdn.com/assets/4395669/Afghanistan_politisch_1989_ENGLISH_crop.jpg
+Timing
+Connect: 411
+Waiting: 426
+Receive: 9585
+Send: 0
+2 -> http://cdn3.vox-cdn.com/assets/4224911/ottoman_empire_gif.gif
+Timing
+Connect: 0
+Waiting: 1995
+Receive: 151049
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 18.861741598914303
+Maximum goodput : 18.479850909307576
+
+
+New connections:
+PORT = 19964
+Active Time = 37.762728000
+1 -> http://cdn3.vox-cdn.com/assets/4418949/camp_settlement_1.jpg
+Timing
+Connect: 850
+Waiting: 1871
+Receive: 45499
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 9.523110398030726
+Maximum goodput : 9.523110398030726
+
+
+New connections:
+PORT = 19976
+Active Time = 47.570429000
+1 -> http://cdn3.vox-cdn.com/assets/4232375/Oil_and_Gas_Infrastructure_Persian_Gulf__large_.gif
+Timing
+Connect: 739
+Waiting: 1973
+Receive: 59584
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 1.9423335123523093
+Maximum goodput : 1.9423335123523093
+
+
+New connections:
+PORT = 19977
+Active Time = 48.656711000
+1 -> http://cdn3.vox-cdn.com/assets/4400101/libya_post-qaddafi_arms_and_population_flow_crop2.jpg
+Timing
+Connect: 0
+Waiting: 1951
+Receive: 65213
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 10.152009568644289
+Maximum goodput : 10.152009568644289
+
+
+Domain Name: cdn2.vox-cdn.com
+
+New connections:
+PORT = 19777
+Active Time = 4.884356000
+1 -> http://cdn2.vox-cdn.com/assets/4397359/west_bank_larger_sidebar_crop3.jpg
+Timing
+Connect: 0
+Waiting: 600
+Receive: 84133
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 7.864749860340176
+Maximum goodput : 7.864749860340176
+
+
+New connections:
+PORT = 19911
+Active Time = 66.833616000
+1 -> http://cdn2.vox-cdn.com/assets/4395615/Iran_under_1900s_qajars_wikimedia_crop.jpg
+Timing
+Connect: 412
+Waiting: 533
+Receive: 12288
+Send: 0
+2 -> http://cdn2.vox-cdn.com/assets/4395687/middle_east_1914_english.jpg
+Timing
+Connect: 272
+Waiting: 1686
+Receive: 46978
+Send: 0
+3 -> http://cdn2.vox-cdn.com/assets/4396135/sunni-shia-kurd_state_crop.jpg
+Timing
+Connect: 0
+Waiting: 2028
+Receive: 26044
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 10.05736724885711
+Maximum goodput : 7.480160926391076
+
+
+New connections:
+PORT = 19930
+Active Time = 13.523069000
+1 -> http://cdn2.vox-cdn.com/assets/4224201/phoenician_800_bc.png
+Timing
+Connect: 2050
+Waiting: 2142
+Receive: 194239
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 18.448941767616184
+Maximum goodput : 18.448941767616184
+
+
+New connections:
+PORT = 19931
+Active Time = 14.831297000
+1 -> http://cdn2.vox-cdn.com/assets/4224903/height_of_omayyad_caliphate_cropped.png
+Timing
+Connect: 0
+Waiting: 1839
+Receive: 69535
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 10.251067807578917
+Maximum goodput : 10.251067807578917
+
+
+New connections:
+PORT = 19945
+Active Time = 57.597706000
+1 -> http://cdn2.vox-cdn.com/assets/4329631/arab-spring.gif
+Timing
+Connect: 0
+Waiting: 1802
+Receive: 9432
+Send: 0
+2 -> http://cdn2.vox-cdn.com/assets/4232151/recognision_of_israel_and_palestine_world_map_by_saint_tepes-d561obp1.jpg
+Timing
+Connect: 0
+Waiting: 1892
+Receive: 21651
+Send: 0
+3 -> http://cdn2.vox-cdn.com/assets/4399741/Baghdad_change_2005_2007_crop2.jpg
+Timing
+Connect: 0
+Waiting: 1729
+Receive: 61952
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 9.650841081313484
+Maximum goodput : 11.41926007231405
+
+
+New connections:
+PORT = 19962
+Active Time = 36.678243000
+1 -> http://cdn2.vox-cdn.com/assets/4232239/Syria_areas_of_control_March_2014.png
+Timing
+Connect: 0
+Waiting: 1953
+Receive: 65561
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 4.646756455819771
+Maximum goodput : 4.646756455819771
+
+
+Domain Name: cdn0.vox-cdn.com
+
+New connections:
+PORT = 19769
+Active Time = 133.593448000
+1 -> http://cdn0.vox-cdn.com/uploads/chorus_asset/file/658228/6a00d8341bfb1653ef017d3c49466d970c.0.png
+Timing
+Connect: 0
+Waiting: 386
+Receive: 33452
+Send: 0
+2 -> http://cdn0.vox-cdn.com/assets/4232271/Iran_demographics.jpg
+Timing
+Connect: 0
+Waiting: 2002
+Receive: 65771
+Send: 0
+3 -> http://cdn0.vox-cdn.com/uploads/chorus_image/image/31939729/149359008.0_standard_1280.0.jpg
+Timing
+Connect: 0
+Waiting: 1723
+Receive: 10223
+Send: 0
+4 -> http://cdn0.vox-cdn.com/assets/4232359/saudi_arabia_early_1900s.gif
+Timing
+Connect: 0
+Waiting: 1385
+Receive: 2134
+Send: 0
+5 -> http://cdn0.vox-cdn.com/assets/4396257/Strait_of_Hormuz_oil_FT_crop.jpg
+Timing
+Connect: 0
+Waiting: 1488
+Receive: 10140
+Send: 0
+6 -> http://cdn0.vox-cdn.com/assets/4232407/global-shipping-lanes-map.png
+Timing
+Connect: 0
+Waiting: 1428
+Receive: 74624
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 13.736452348938597
+Maximum goodput : 17.106694897084047
+
+
+New connections:
+PORT = 19774
+Active Time = 12.289504000
+1 -> http://cdn0.vox-cdn.com/assets/4224127/fertile_crescent_textbook.jpg
+Timing
+Connect: 0
+Waiting: 7789
+Receive: 132737
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 2.101622004414745
+Maximum goodput : 2.101622004414745
+
+
+New connections:
+PORT = 19934
+Active Time = 15.220655000
+1 -> http://cdn0.vox-cdn.com/assets/4407303/arab_expansion_gif_map_crop_2.gif
+Timing
+Connect: 1698
+Waiting: 2001
+Receive: 112236
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 3.060586621048505
+Maximum goodput : 3.060586621048505
+
+
+New connections:
+PORT = 19935
+Active Time = 93.143602000
+1 -> http://cdn0.vox-cdn.com/assets/4224943/sykes_picot_by_FT.png
+Timing
+Connect: 0
+Waiting: 2026
+Receive: 72495
+Send: 0
+2 -> http://cdn0.vox-cdn.com/uploads/chorus_image/image/31654917/175773506.0_standard_1280.0.jpg
+Timing
+Connect: 0
+Waiting: 1349
+Receive: 79472
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 7.192811597254667
+Maximum goodput : 9.951113869922063
+
+
+New connections:
+PORT = 19937
+Active Time = 228.934995000
+1 -> http://cdn0.vox-cdn.com/assets/4225057/islamic_states_gi.gif
+Timing
+Connect: 0
+Waiting: 1941
+Receive: 155585
+Send: 0
+2 -> http://cdn0.vox-cdn.com/assets/4232063/Mid_East_Ethnic_lg.png
+Timing
+Connect: 0
+Waiting: 1595
+Receive: 176935
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 11.56632683748346
+Maximum goodput : 11.028722412185266
+
+
+New connections:
+PORT = 19951
+Active Time = 117.040271000
+1 -> http://cdn0.vox-cdn.com/assets/4239219/arab-israeli-war_1948.jpg
+Timing
+Connect: 0
+Waiting: 1728
+Receive: 82518
+Send: 0
+2 -> http://cdn0.vox-cdn.com/assets/4232335/afghanistan_war_le_monde.jpg
+Timing
+Connect: 0
+Waiting: 11428
+Receive: 55947
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 6.961795399559455
+Maximum goodput : 6.881492522843501
+
+
+New connections:
+PORT = 19952
+Active Time = 26.737691000
+1 -> http://cdn0.vox-cdn.com/assets/4232063/Mid_East_Ethnic_lg.png
+Timing
+Connect: 0
+Waiting: 1595
+Receive: 176935
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 11.028722412185266
+Maximum goodput : 11.028722412185266
+
+
+New connections:
+PORT = 19996
+Active Time = 156.822294000
+1 -> http://cdn0.vox-cdn.com/assets/4396023/kurdistan_crop.jpg
+Timing
+Connect: 3278
+Waiting: 1582
+Receive: 21834
+Send: 0
+Active Percentage : 14.931550484779926
+Idle Percentage : 85.06844951522008
+Average goodput : 21.83392873500046
+Maximum goodput : 21.83392873500046
+
+
+Domain Name: cdn.jsdelivr.net
+
+New connections:
+PORT = 19909
+Active Time = 4.915030000
+1 -> http://cdn.jsdelivr.net/jquery.unveiljs/1.3.0/jquery.unveil.min.js
+Timing
+Connect: 181
+Waiting: 201
+Receive: 0
+Send: 0
+Active Percentage : 4.089496910496986
+Idle Percentage : 95.91050308950302
+
+
+Domain Name: edge.quantserve.com
+
+New connections:
+PORT = 19906
+Active Time = 4.593864000
+1 -> http://edge.quantserve.com/quant.js
+Timing
+Connect: 179
+Waiting: 146
+Receive: 13
+Send: 0
+Active Percentage : 3.461138597050326
+Idle Percentage : 96.53886140294968
+Average goodput : 260.6923076923077
+Maximum goodput : 260.6923076923077
+
+
+Domain Name: www.youtube.com
+
+New connections:
+PORT = 19818
+Active Time = 8.821942000
+Active Percentage : 0
+Idle Percentage : 100
+
+
+Domain Name: www.google-analytics.com
+
+New connections:
+PORT = 19932
+Active Time = 26.914940000
+1 -> http://www.google-analytics.com/analytics.js
+Timing
+Connect: 1890
+Waiting: 1878
+Receive: 10792
+Send: 0
+Active Percentage : 47.07422717643063
+Idle Percentage : 52.92577282356936
+Average goodput : 1.0590252038547072
+Maximum goodput : 1.0590252038547072
+
+
+Domain Name: b.scorecardresearch.com
+
+New connections:
+PORT = 19940
+Active Time = 19.814572000
+1 -> http://b.scorecardresearch.com/beacon.js
+Timing
+Connect: 1851
+Waiting: 1765
+Receive: 0
+Send: 0
+Active Percentage : 8.907585790901766
+Idle Percentage : 91.09241420909824
+
+
+Domain Name: pixel.quantserve.com
+
+New connections:
+PORT = 19941
+Active Time = 16.212937000
+1 -> http://pixel.quantserve.com/pixel;r=294631487;a=p-d9vfr8QTWnv1E;fpan=0;fpa=P0-1662489455-1435504295020;ns=0;ce=1;cm=;je=0;sr=1366x768x24;enc=n;dst=0;et=1442243526578;tzo=-330;ref=;url=http%3A%2F%2Fwww.vox.com%2Fa%2Fmaps-explain-the-middle-east;ogl=site_name.Vox%252Ecom%2Ctype.article%2Ctitle.40%20maps%20that%20explain%20the%20Middle%20East%2Cimage.http%3A%2F%2Fcdn2%252Evox-cdn%252Ecom%2Fuploads%2Fchorus_image%2Fimage%2F32283247%2F40maps_Middle_East_L%2Cdescription.These%20maps%20are%20crucial%20for%20understanding%20the%20region's%20history%252C%20its%20present%252C%20and%20%2Curl.http%3A%2F%2Fwww%252Evox%252Ecom%2Fa%2Fmaps-explain-the-middle-east
+Timing
+Connect: 1894
+Waiting: 1844
+Receive: 0
+Send: 0
+Active Percentage : 11.373633290501282
+Idle Percentage : 88.62636670949871
+
+
+Domain Name: s.ytimg.com
+
+Domain Name: fonts.gstatic.com
+
+Domain Name: cdn1.vox-cdn.com
+
+New connections:
+PORT = 19779
+Active Time = 14.304588000
+Active Percentage : 0
+Idle Percentage : 100
+
+
+New connections:
+PORT = 19780
+Active Time = 25.823032000
+1 -> http://cdn1.vox-cdn.com/assets/4231067/arab_dialects.png
+Timing
+Connect: 0
+Waiting: 1854
+Receive: 92499
+Send: 0
+Active Percentage : 100
+Idle Percentage : 0
+Average goodput : 4.874495940496654
+Maximum goodput : 4.874495940496654
+
+
+New connections:
+PORT = 19781
+Active Time = 228.915387000
+1 -> http://cdn1.vox-cdn.com/assets/4231075/sunni_shia_nasr.jpg
+Timing
+Connect: 0
+Waiting: 1842
+Receive: 17853
+Send: 0
+2 -> http://cdn1.vox-cdn.com/assets/4400181/internet_twitter_tall-1.jpg
+Timing
+Connect: 0
+Waiting: 1957
+Receive: 107507
+Send: 0
+3 -> http://cdn1.vox-cdn.com/assets/4231067/arab_dialects.png
+Timing
+Connect: 0
+Waiting: 1854
+Receive: 92499
+Send: 0
+Active Percentage : 97.63957020503824
+Idle Percentage : 2.3604297949617603
+Average goodput : 8.311375706305455
+Maximum goodput : 11.411573199884659
+
+
+New connections:
+PORT = 19953
+Active Time = 228.947214000
+1 -> http://cdn1.vox-cdn.com/assets/4397351/weighted_muslim_populatiojs_crop-2.jpg
+Timing
+Connect: 1026
+Waiting: 1939
+Receive: 99634
+Send: 0
+2 -> http://cdn1.vox-cdn.com/assets/4397351/weighted_muslim_populatiojs_crop-2.jpg
+Timing
+Connect: 1026
+Waiting: 1939
+Receive: 99634
+Send: 0
+Active Percentage : 88.73049662879934
+Idle Percentage : 11.269503371200662
+Average goodput : 7.809472669972098
+Maximum goodput : 7.809472669972098
+
+
+New connections:
+PORT = 19968
+Active Time = 43.682275000
+1 -> http://cdn1.vox-cdn.com/assets/4396287/afghanistan_taliban_ethnicity_map_crop2.jpg
+Timing
+Connect: 1091
+Waiting: 1885
+Receive: 38662
+Send: 0
+Active Percentage : 92.82254644475363
+Idle Percentage : 7.177453555246371
+Average goodput : 9.93031917645233
+Maximum goodput : 9.93031917645233
+
+
+New connections:
+PORT = 19980
+Active Time = 53.108083000
+1 -> http://cdn1.vox-cdn.com/uploads/chorus_image/image/32565781/487322813.0_standard_1280.0.jpg
+Timing
+Connect: 0
+Waiting: 2018
+Receive: 49728
+Send: 0
+Active Percentage : 97.43526234980088
+Idle Percentage : 2.5647376501991226
+Average goodput : 2.7008124195624195
+Maximum goodput : 2.7008124195624195
+
+
+New connections:
+PORT = 19981
+Active Time = 53.382425000
+1 -> http://cdn1.vox-cdn.com/assets/4238583/middle_east_night_sky.jpg
+Timing
+Connect: 0
+Waiting: 1961
+Receive: 37904
+Send: 0
+Active Percentage : 74.67813610940306
+Idle Percentage : 25.32186389059694
+Average goodput : 11.35845821021528
+Maximum goodput : 11.35845821021528
+
+
+Domain Name: stats.g.doubleclick.net
+
+Domain Name: www.google.com
+
+Domain Name: static.doubleclick.net
+
+Domain Name: i.ytimg.com
+
+Domain Name: static.chartbeat.com
+
+New connections:
+PORT = 20009
+Active Time = 210.190458000
+1 -> http://static.chartbeat.com/js/chartbeat.js
+Timing
+Connect: 190
+Waiting: 225
+Receive: 66
+Send: 0
+Active Percentage : 0.13844586608208445
+Idle Percentage : 99.86155413391792
+Average goodput : 170.46969696969697
+Maximum goodput : 170.46969696969697
+
+
+Domain Name: ping.chartbeat.net
+
+New connections:
+PORT = 20012
+Active Time = 225.510993000
+1 -> http://ping.chartbeat.net/ping?h=vox.com&p=%2Fa%2Fmaps-explain-the-middle-east&u=BClAvKDyLZf8DvB4Ww&d=vox.com&g=2724&n=0&f=f0001&c=0&x=22283&m=22283&y=22731&o=1349&w=282&j=45&R=1&W=0&I=0&E=0&e=0&r=&t=BCFttRCiGGyodBR0pdsSyORY7n&V=65&i=40%20maps%20that%20explain%20the%20Middle%20East&tz=-330&sn=1&_
+Timing
+Connect: 177
+Waiting: 315
+Receive: 0
+Send: 0
+2 -> http://ping.chartbeat.net/ping?h=vox.com&p=%2Fa%2Fmaps-explain-the-middle-east&u=BClAvKDyLZf8DvB4Ww&d=vox.com&g=2724&n=0&f=f0001&c=0.25&x=22283&m=22283&y=22731&o=1349&w=282&j=30&R=1&W=0&I=0&E=5&e=5&r=&t=BCFttRCiGGyodBR0pdsSyORY7n&V=65&tz=-330&sn=2&_
+Timing
+Connect: 0
+Waiting: 404
+Receive: 0
+Send: 0
+Active Percentage : 0.3188314637947605
+Idle Percentage : 99.68116853620525
+
+
+
+Average goodput(Network) : 9.359072434546235
+Maximum goodput(Network) : 260.6923076923077
+
+

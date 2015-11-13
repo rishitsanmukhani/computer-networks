@@ -1,0 +1,2 @@
+
+Maximum number of TCP connections across domain that is simultaneously active is 16

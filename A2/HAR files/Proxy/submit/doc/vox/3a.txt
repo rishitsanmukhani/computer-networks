@@ -1,0 +1,196 @@
+Different types of objects:
+text/html - 2
+text/css - 2
+text/javascript - 6
+application/javascript - 4
+image/jpeg - 26
+image/png - 9
+application/x-javascript - 3
+application/font-woff - 8
+image/gif - 14
+font/woff2 - 1
+Total - 75
+
+Domain Name: www.vox.com
+PORT: 19888	Objects: 2	Content-size: 171547	Object-size: 99441	
+PORT: 19916	Objects: 1	Content-size: 109193	Object-size: 109586	
+PORT: 19917	Objects: 1	Content-size: 72419	Object-size: 72811	
+PORT: 19918	Objects: 1	Content-size: 63985	Object-size: 64379	
+PORT: 19920	Objects: 1	Content-size: 5176	Object-size: 5568	
+PORT: 19922	Objects: 1	Content-size: 111823	Object-size: 112218	
+PORT: 19923	Objects: 1	Content-size: 64339	Object-size: 64733	
+Connections: 7
+Total Objects: 8
+Total Content-size: 598482
+Total Object-size: 528736
+
+Domain Name: ea-cdn.voxmedia.com
+PORT: 19893	Objects: 1	Content-size: 16627	Object-size: 17149	
+PORT: 19894	Objects: 1	Content-size: 4867	Object-size: 5402	
+PORT: 19895	Objects: 1	Content-size: 568	Object-size: 1101	
+PORT: 19919	Objects: 1	Content-size: 3720	Object-size: 4333	
+Connections: 4
+Total Objects: 4
+Total Content-size: 25782
+Total Object-size: 27985
+
+Domain Name: ajax.googleapis.com
+PORT: 19890	Objects: 1	Content-size: 93100	Object-size: 33270	
+PORT: 20008	Objects: 0	Content-size: 0	Object-size: 0	
+Connections: 2
+Total Objects: 1
+Total Content-size: 93100
+Total Object-size: 33270
+
+Domain Name: cdnjs.cloudflare.com
+PORT: 19892	Objects: 1	Content-size: 14358	Object-size: 5414	
+Connections: 1
+Total Objects: 1
+Total Content-size: 14358
+Total Object-size: 5414
+
+Domain Name: cdn3.vox-cdn.com
+PORT: 19897	Objects: 2	Content-size: 212	Object-size: 1066815	
+PORT: 19904	Objects: 2	Content-size: 195	Object-size: 375689	
+PORT: 19910	Objects: 2	Content-size: 213	Object-size: 3029837	
+PORT: 19964	Objects: 1	Content-size: 95	Object-size: 433292	
+PORT: 19976	Objects: 1	Content-size: 125	Object-size: 115732	
+PORT: 19977	Objects: 1	Content-size: 127	Object-size: 662043	
+Connections: 6
+Total Objects: 9
+Total Content-size: 967
+Total Object-size: 5683408
+
+Domain Name: cdn2.vox-cdn.com
+PORT: 19777	Objects: 1	Content-size: 108	Object-size: 661685	
+PORT: 19911	Objects: 3	Content-size: 322	Object-size: 857994	
+PORT: 19930	Objects: 1	Content-size: 95	Object-size: 3583504	
+PORT: 19931	Objects: 1	Content-size: 113	Object-size: 712808	
+PORT: 19945	Objects: 3	Content-size: 344	Object-size: 897866	
+PORT: 19962	Objects: 1	Content-size: 111	Object-size: 304646	
+Connections: 6
+Total Objects: 10
+Total Content-size: 1093
+Total Object-size: 7018503
+
+Domain Name: cdn0.vox-cdn.com
+PORT: 19769	Objects: 6	Content-size: 664	Object-size: 2697070	
+PORT: 19774	Objects: 1	Content-size: 103	Object-size: 278963	
+PORT: 19934	Objects: 1	Content-size: 107	Object-size: 343508	
+PORT: 19935	Objects: 2	Content-size: 221	Object-size: 1093070	
+PORT: 19937	Objects: 2	Content-size: 191	Object-size: 3846035	
+PORT: 19951	Objects: 2	Content-size: 201	Object-size: 963965	
+PORT: 19952	Objects: 1	Content-size: 96	Object-size: 1951367	
+PORT: 19996	Objects: 1	Content-size: 92	Object-size: 476722	
+Connections: 8
+Total Objects: 16
+Total Content-size: 1675
+Total Object-size: 11650700
+
+Domain Name: cdn.jsdelivr.net
+PORT: 19909	Objects: 1	Content-size: 944	Object-size: 965	
+Connections: 1
+Total Objects: 1
+Total Content-size: 944
+Total Object-size: 965
+
+Domain Name: edge.quantserve.com
+PORT: 19906	Objects: 1	Content-size: 7874	Object-size: 3389	
+Connections: 1
+Total Objects: 1
+Total Content-size: 7874
+Total Object-size: 3389
+
+Domain Name: www.youtube.com
+PORT: 19818	Objects: 0	Content-size: 0	Object-size: 0	
+Connections: 1
+Total Objects: 0
+Total Content-size: 0
+Total Object-size: 0
+
+Domain Name: www.google-analytics.com
+PORT: 19932	Objects: 1	Content-size: 25252	Object-size: 11429	
+Connections: 1
+Total Objects: 1
+Total Content-size: 25252
+Total Object-size: 11429
+
+Domain Name: b.scorecardresearch.com
+PORT: 19940	Objects: 1	Content-size: 1900	Object-size: 1424	
+Connections: 1
+Total Objects: 1
+Total Content-size: 1900
+Total Object-size: 1424
+
+Domain Name: pixel.quantserve.com
+PORT: 19941	Objects: 1	Content-size: 690	Object-size: 474	
+Connections: 1
+Total Objects: 1
+Total Content-size: 690
+Total Object-size: 474
+
+Domain Name: s.ytimg.com
+Connections: 0
+Total Objects: 0
+Total Content-size: 0
+Total Object-size: 0
+
+Domain Name: fonts.gstatic.com
+Connections: 0
+Total Objects: 0
+Total Content-size: 0
+Total Object-size: 0
+
+Domain Name: cdn1.vox-cdn.com
+PORT: 19779	Objects: 0	Content-size: 0	Object-size: 0	
+PORT: 19780	Objects: 1	Content-size: 91	Object-size: 450886	
+PORT: 19781	Objects: 3	Content-size: 285	Object-size: 1810708	
+PORT: 19953	Objects: 2	Content-size: 224	Object-size: 1556178	
+PORT: 19968	Objects: 1	Content-size: 117	Object-size: 383926	
+PORT: 19980	Objects: 1	Content-size: 126	Object-size: 134306	
+PORT: 19981	Objects: 1	Content-size: 99	Object-size: 430531	
+Connections: 7
+Total Objects: 9
+Total Content-size: 942
+Total Object-size: 4766535
+
+Domain Name: stats.g.doubleclick.net
+Connections: 0
+Total Objects: 0
+Total Content-size: 0
+Total Object-size: 0
+
+Domain Name: www.google.com
+Connections: 0
+Total Objects: 0
+Total Content-size: 0
+Total Object-size: 0
+
+Domain Name: static.doubleclick.net
+Connections: 0
+Total Objects: 0
+Total Content-size: 0
+Total Object-size: 0
+
+Domain Name: i.ytimg.com
+Connections: 0
+Total Objects: 0
+Total Content-size: 0
+Total Object-size: 0
+
+Domain Name: static.chartbeat.com
+PORT: 20009	Objects: 1	Content-size: 27659	Object-size: 11251	
+Connections: 1
+Total Objects: 1
+Total Content-size: 27659
+Total Object-size: 11251
+
+Domain Name: ping.chartbeat.net
+PORT: 20012	Objects: 2	Content-size: 616	Object-size: 426	
+Connections: 1
+Total Objects: 2
+Total Content-size: 616
+Total Object-size: 426
+
+
+Total Objects Downloaded: 66
