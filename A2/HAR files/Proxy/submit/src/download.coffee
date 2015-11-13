@@ -61,7 +61,6 @@ requestObject = (url,opt,cb)->
       if(opt.referrer)
         client.write("Referer: #{opt.referrer}\r\n")
       client.write("Accept-Encoding: gzip\r\n")
-      client.write("Connection: keep-alive\r\n")
       client.write("\r\n")
       if(!callbackDone)
         callbackDone=true
@@ -170,7 +169,7 @@ receiveObject = (filename,url,client, body, cb)->
 
 MAX_CONNECTIONS = 20
 MAX_CONNECTIONS_PER_SERVER = 5
-MAX_OBJECTS_PER_CONNECTION = 2
+MAX_OBJECTS_PER_CONNECTION = 1
 
 class Connection
   constructor: (url,cb)->
